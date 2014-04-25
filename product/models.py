@@ -60,7 +60,7 @@ class Discount(models.Model):
 class Category(MPTTModel):
 	name = models.CharField(max_length = 128, verbose_name = _('Name'))
 	slug = models.SlugField(max_length = 128, verbose_name = _('Slug'),unique = True,help_text = _('Displayed in the URL,should be unique.'))
-	banner = models.ImageField(upload_to='banner/',verbose_name= _('Banner'),blank = True, null = True,help_text = _('Leave blank to set the banner same as parent category'))
+	banner = models.ImageField(upload_to='banner/',verbose_name= _('Banner'),blank = True, null = True,help_text = _('Category page fix picture'))
 	parent = TreeForeignKey('self',verbose_name = _('Parent'),null = True, blank = True, related_name = 'children')
 	collection = models.ForeignKey(Collection,verbose_name = _('Collection'),default = 1)
 	

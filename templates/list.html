@@ -16,9 +16,9 @@
                 <div class="banner">
                     <ul>
                         <li>
-                            {% if category  %}
+                            {% if category.banner  %}
                             <img src="{{ category.banner.url }}" />
-                            
+                            {% endif%}
                         </li>
                     </ul>
                 </div>
