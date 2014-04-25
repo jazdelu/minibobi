@@ -2,7 +2,6 @@ from django.shortcuts import render_to_response
 from cart.models import Cart, CartItem
 from product.models import *
 from django.http import HttpResponse, HttpResponseRedirect
-from django.utils import simplejson
 from django.http import Http404
 from django.template import RequestContext
 # Create your views here.
