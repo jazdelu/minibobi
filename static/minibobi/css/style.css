@@ -26,11 +26,9 @@
 body,html{
 	background-image: url("http://minibobi.qiniudn.com/static/minibobi/images/background.jpg");
 	color:#fff;
-	font-size: 100%;
 }
 
 p, span, a,li,div{
-	font-size: 0.875rem;
 	color:#9e9e9e;
 	font-family: 'Quicksand',Arial, sans-serif;
 }
@@ -354,7 +352,6 @@ aside{
 }
 .foot-nav-right > li > a{
 	font-weight: bold;
-	font-size: 1em;
 	width: 100%;
 	text-decoration: underline;
 } 
@@ -645,9 +642,6 @@ td tr{
 }
 
 @media all and (max-width: 768px) { /* screen size until 1000px */
-    body,html {
-        font-size: 80%; /* 1.2x default size */
-        }
     .cover img{
     	width: 50%;
     }
