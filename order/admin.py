@@ -14,7 +14,7 @@ admin.site.register(Express,ExpressAdmin)
 
 class OrderAdminForm(ModelForm):
 	class Media:
-		js=("/static/minibobi/js/admin_extra.js",)
+		js=('/static/minibobi/js/jquery-1.8.3.min.js',"/static/minibobi/js/admin_extra.js")
 
 	class Meta:
 		widgets = {
