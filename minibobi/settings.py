@@ -158,7 +158,7 @@ SUIT_CONFIG = {
     'MENU':(
         {'app':'auth','label':u'User','icon':'icon-user'},
         {'app':'banner','label':u'Banner','icon':' icon-eye-open'},
-        {'app':'lookbook','label':u'Lookbook','icon': 'icon-picture'}
+        {'app':'lookbook','label':u'Lookbook','icon': 'icon-picture'},
         {'app':'page','label':u'Page','icon':'icon-bookmark'},
         {'app':'product','label':u'Product','icon':'icon-shopping-cart'},
         {'app':'order','label':u'Order','icon':'icon-time'},
