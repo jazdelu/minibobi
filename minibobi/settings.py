@@ -69,6 +69,10 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'cart.processors.get_cart_by_session',
 )
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates/'),
+)
+
 ROOT_URLCONF = 'minibobi.urls'
 
 WSGI_APPLICATION = 'minibobi.wsgi.application'
