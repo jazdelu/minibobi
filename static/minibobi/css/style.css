@@ -132,9 +132,7 @@ a:hover{
 	height: 50px;
 	line-height: 52px;
 }
-.top-mobile .button-group div span{
-	font-size: 16px;
-}
+
 .top-mobile>.button-group>a{
 	background-color: transparent;
 	display: inline-block;
@@ -145,8 +143,9 @@ a:hover{
 }
 .top-mobile>.button-group>a>span{
 	display: inline-block;
-	font-size: 24px;
+	font-size: 2.4rem;
 	color: #333;
+	line-height: 2.4rem;
 }
 .mobile-nav {
 	display: none;
@@ -179,7 +178,7 @@ a:hover{
 .main-nav >li>a{
 	color:#9e9e9e;
 	background-color: transparent;
-	font-size: 1em;
+	font-size: 1rem;
 	padding-top:20px;
 	padding-bottom:20px;
 }
@@ -231,27 +230,27 @@ aside{
 }
 .side-nav > li > a{
 	color:#1b1b1b;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: bold;
 	margin-top: 10px;
 }
 .side-nav > li > a:first{
 	color:#1b1b1b;
-	font-size: 1em;
+	font-size: 1rem;
 
 	font-weight: bold;
 	margin-top: 0px;
 }
 .side-nav > li >ul>li>a{
 	color:#9e9e9e;
-	font-size: 0.875em;
+	font-size: 0.875rem;
 	padding-top: 0px;
 	padding-bottom: :0px;
 }
 .side-nav > li >ul>li>a:hover{
 	background-color:#fff;
 	color:#000;
-	font-size: 0.875em;
+	font-size: 0.875rem;
 	padding-top: 0px;
 	padding-bottom: :0px;
 }
@@ -268,6 +267,9 @@ aside{
 }
 .item .cover img{
 	margin: 0 auto;
+}
+.item .brief{
+	min-height: 70px;
 }
 .cart_btn a{
 	display: inline-block;
@@ -434,12 +436,11 @@ aside{
 }
 .product .name{
 	color:#333;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 .product .desc{
 	color: #333;
-	font-size: 0.875em;
 }
 .product .price{
 	color: #333;
@@ -555,40 +556,6 @@ aside{
 	padding-left: 10px;
 }
 
-/*----------------modal---------------------*/
-#dialog{
-	overflow: hidden;
-}
-.ui-dialog{
-	border: 1px dashed #ccc;
-}
-.no-close .ui-dialog-titlebar-close {
-  display: none;
-}
-.ui-widget.info-dialog {
-    font-size: .8em;
-	text-align: left;
-	background-color: white;
-	color:black;
-	z-index: 2048;
-	overflow: hidden;
-}
-.ui-widget-header{
-	border: none;
-	background: none;
-}
-
-.ui-widget-overlay{
-    background-color: #ccc;
-    background-image: none;
-    opacity: 0.4;
-    z-index: 2046;    
-}
-.table>tbody>tr>td{
-	vertical-align: middle;
-	border: none;
-}
-
 /*--------------cart----------------*/
 .table{
 	border: none;
@@ -642,7 +609,7 @@ td tr{
 }
 
 @media all and (max-width: 768px) { /* screen size until 1000px */
-    .cover img{
+    .cover > .banner img{
     	width: 50%;
     }
     .cart_btn a{

@@ -24,6 +24,7 @@
                             {% endif %}
                             </a>
                         </div>
+                        <div class="brief">
                         <p><a href="/product/{{ p.id }}">{{ p.name }}</a></p>
                         <p>
                         {% if p.is_discount %}
@@ -33,6 +34,7 @@
                         <span>¥{{ p.price }}</span>
                         {% endif %}
                         </p>
+                        </div>
                         <div class="cart_btn">
                         <a href= "/product/{{ p.id }}"><span>VIEW PRODUCT</span></a>
                         </div>
