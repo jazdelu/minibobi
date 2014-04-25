@@ -40,12 +40,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mptt',
-    'cart',
-    'product',
-    'order',
-    'lookbook',
-    'page',
-    'banner',
     'south',
     'modeltranslation',
 )
