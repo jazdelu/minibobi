@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+　　<!--[if lt IE 9]>
+　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+　　<![endif]-->
+    <meta name="description" content="{% block description_meta %}MINIBOBI,BABY CLOTHING, FAT BABY CLOTHING,{% endblock %}">
+    <meta name="keywords" content = "{% block keywords_meta %}BABY CLOTHING, FAT BABY CLOTHING{% endblock %}">
+    <meta name="author" content="Minibobi">
+    <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/minibobi/css/style.css" rel="stylesheet" type="text/css">
+    {% block css %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body style="background-color:#ccc;">
+    <div class="container shadow-page">
+            <header>
+            <div class="col-lg-12 col-sm-12 col-xs-12 navbar-header top hidden-xs">
+                <ul class="nav navbar-nav">
+                    <li><a href="/lang/?lang=zh&next={{request.path}}">简体中文</a></li>
+                    <li><a>|</a></li>
+                    <li><a href="/lang/?lang=en&next={{request.path}}">English</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ">
+                    <li><a><span>CALL US AT 131231</span></a></li>
+                    <li><a><span>|</span></a></li>
+                    <li><a href="/cart/"><span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a></li>
+                    <li><a><span>|</span></a></li>
+                </ul>
+            </div>
+            <div class="top-mobile navbar-header visible-xs">
+                <div class="button-group col-lg-12 col-sm-12 col-xs-12">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse" id="toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div>
+                        <span>MINIBOBI</span>
+                    </div>
+                    <a href="/cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </div>
+            </div>
+            <div class="col-lg-12 col-sm-12 col-xs-12 mobile-nav">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>GIRLS</span><span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <ul class="dropdown-menu wideMenuItem">  
+                            <li><a href="/product/girls/top/">TOP</a></li>
+                            <li><a href="/product/girls/dress/">DRESS</a></li>
+                            <li><a href="/product/girls/skirt/">SKIRT</a></li>
+                            <li><a href="/product/girls/pants">PANTS</a></li>
+                            <li><a href="/product/girls/cardigan">CARDIGAN</a></li>
+                            <li><a href="/product/girls/accessories">ACCESSORIES</a></li>
+                            <li><a href="/lookbook/">LOOKBOOK</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>BOYS</span><span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <ul class="dropdown-menu wideMenuItem">  
+                            <li><a href="/product/boys/tshirt/">TSHIRT</a></li>
+                            <li><a href="/product/boys/polo/">POLO</a></li>
+                            <li><a href="/product/boys/shirt/">SHIRT</a></li>
+                            <li><a href="/product/boys/pants/">PANTS</a></li>
+                            <li><a href="/product/boys/cardigan">CARDIGAN</a></li>
+                            <li><a href="/product/boysaccessories/">ACCESSORIES</a></li>
+                            <li><a href="#">LOOKBOOK</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/lookbook/"><span>LOOKBOOK</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="/about/"><span>ABOUT</span><span  class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="/contact/"><span>CONTACT</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="#"><span>BLOG</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                </ul>
+            </div>
+                <div class="col-md-7 col-sm-7 col-xs-12 hidden-xs logo">
+                <a href="/"><img src = "/static/minibobi/images/LOGO.jpg" class="img-responsive"></a>
+                </div>
+                <div class="col-md-5 col-sm-5 search hidden-xs">
+                <form class="form-inline" role = "form">
+                <div class="form-group">
+                    <input type="text" name="search" class="input-medium search-query" placeholder="search" />
+                    </div>
+                    <a  class="glyphicon glyphicon-search"></a>
+                </form>
+                </div>
+            </header>
+            <div class="col-md-12 col-sm-12 navbar hidden-xs">
+                <nav>
+                    <ul class="nav navbar-nav main-nav">
+                        <li><a href="/product/boys/">BOYS</a></li>
+                        <li><a href="/product/girls/">GIRLS</a></li>
+                        <li><a href="/lookbook/">LOOKBOOK</a></li>
+                        <li><a href="/about/">ABOUT</a></li>
+                        <li><a href="/contact/">CONTACT</a></li>
+                        <li><a href="#">BLOG</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+            <div class="col-md-12 wrap">
+            {% block wrap %}
+            {% endblock %}
+            </div>
+            </div>
+        </div>
+    <footer class="footer">
+        <div class="container">
+            <nav>
+                <ul class="nav col-md-4 col-sm-4 col-xs-4 foot-nav foot-nav-left">
+                    <li>MINI BOBI</li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press review</a></li>
+                    <li><a href="#">Stocklists</a></li>
+                </ul>
+                <ul class="nav col-md-4 col-sm-4 col-xs-4 foot-nav foot-nav-middle">
+                    <li>E-SHOP</li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">General terms and conditions of sales</a></li>
+                </ul>
+                <ul class="nav col-md-4 col-sm-4 col-xs-4 foot-nav foot-nav-right">
+                    <li><a href="#">SIZE GUIDE</a></li>
+                    <li><a href="#">NEWSLETTER SUBSCRIPTION</a>
+                        <p>Receive our news and customized offers by subscribing to our newsletter</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery.pin/1.0.1/jquery.pin.min.js"></script>
+<script type="text/javascript" src="/static/minibobi/js/responsiveslides.min.js"></script>
+<script type="text/javascript">
+    $(".side-nav").pin({
+        containerSelector:".wrap"
+    });
+    var close = 0;
+
+    $("#toggle").click(function(){
+        if (close == 0){
+          $(".mobile-nav").slideDown(300);
+          close = 1;  
+        }
+        else{
+          $(".mobile-nav").slideUp(300);
+          close = 0;  
+        }
+    });
+</script>
+<script>
+  $(function() {
+    $(".banner ul").responsiveSlides();
+  });
+</script>
+{% block js %}
+{% endblock %}
+
+</html>

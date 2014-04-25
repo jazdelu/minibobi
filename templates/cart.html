@@ -1,0 +1,89 @@
+ {% extends "base-page.html" %}
+ {% block title %}Shopping Cart{% endblock %}
+ {% block main %}
+                <div class="col-md-12 col-xs-12 col-sm-12 cart">
+                    <h1>SHOPPING BAG</h1>
+                <div class=".table-responsive hidden-xs">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>PRODUCT</th>
+                        <th>DESCRIPTION</th>
+                        <th>COLOR</th>
+                        <th>SIZE</th>
+                        <th>QUANTITY</th>
+                        <th>AMOUNT</th>
+                        <th>DELETE</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr><td colspan = "7">TOTAL: ¥ {{ cart.total }} RMB</td></tr>
+                    </tfoot>
+                    <tbodt>
+                    {% for i in cart.items.all %}
+                    <tr>
+                        <td>
+                            <a href="/product/{{ i.product.id }}"><img src="{{ i.product.get_cover.thumb_small }}" class="img-responsive thumb_small"/>
+                        </td>
+                        <td width="25%">
+                            <a href="/product/{{ i.product.id }}">{{ i.product.name }}</a><br/>
+                            <span>{{ i.product.short_description }}</span>
+                        </td>
+                        <td>
+                            <label>{{ i.color.name }}</label>
+                        </td>
+                        <td>
+                            <span>{{ i.size.size }}</span>
+                        </td>
+                        <td width="150px" class="quantity">
+                            <input type="text" value = "{{ i.quantity }}" name = "quantity" class="form_control" id="id_quantity" value_data={{ i.id }}>
+                        </td>
+                        <td>
+                            <label class="amount" value_data={{ i.id }}>¥{{ i.get_price }}</label>
+                        </td>
+                        <td>
+                            <a href="/cart/delete/{{ i.id }}"><span>X</span></a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                        <label>The cart is empty!</label>
+                    {% endfor %}
+                    </tbodt>
+                </table>
+                </div>
+                <div class="cart_mobile col-md-12 col-xs-12 col-sm-12 visible-xs " style="padding:0px;">
+                    {% for i in cart.items.all %}
+                    <div class="cartitem_mobile col-md-12 col-xs-12 col-sm-12" style="border-bottom:2px dashed #ccc;padding-top:5px;">
+                        <div class="col-md-5 col-xs-5 col-sm-5" style="padding:0px;">
+                            <a href="/product/{{ i.product.id }}"><img src="{{ i.product.get_cover.thumb_middle }}" class="img-responsive"/></a>                   
+                        </div>
+                        <div class="col-md-7 col-xs-7 col-sm-7" style="padding:0px;padding-left:5px;">
+                            <p><b>{{ i.product.name }}</b></p>
+                            <p>¥ {{ i.get_price }}</p>
+                            <p>{{ i.color.name }}</p>
+                            <p>{{ i.size.size }}</p>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12 cart_btn" style="padding:0px; margin-top:10px;">
+                        <span class="quantity col-xs-12" style='padding:0px;width:100px;'><input type="text" value = "{{ i.quantity }}" name = "quantity" class="form_control" id="id_quantity" value_data={{ i.id }} style="text-align:center;"></span>   
+                        <a href="/cart/delete/{{ i.id }}" class="col-xs-7 reverse" style="width:auto;padding:3px 5px;margin-left:40px;"><span style="padding:2px 5px;">DELETE</span></a>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <label>The cart is empty!</label>
+                    {% endfor %}
+                </div>
+                <div class="cart_btn col-md-12 col-xs-12 col-sm-12" style="margin-top:5px;">
+                    <a href="/"><span>CONTINUE SHOPPING</span></a>
+                    <a href= "/order/" class="reverse"><span>CONFIRM ORDER</span></a>
+                </div>
+                </div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/touchspin/bootstrap.touchspin.js"></script>
+<script src="/static/minibobi/js/bobi.js"></script>
+<script>
+$(".form_control[name='quantity']").change(function(){
+    window.location.href="/cart/update/?iid="+$(this).attr("value_data")+"&quantity="+$(this).val();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,9 @@
+.color-dropdown{
+	height:34px;
+}
+#color .hex-pound{
+	display: block;
+	float: left;
+	height:34px;
+	line-height: 26px;
+}

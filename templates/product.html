@@ -1,0 +1,103 @@
+{% extends "base-list.html" %}
+
+{% block description_meta %}{{ product.description_meta }}{% endblock %}
+{% block keywords_meta %}{{ product.keywords_meta }}{% endblock %}
+
+{% block css %}
+    <link href="http://cdn.bootcss.com/jqueryui/1.10.4/css/jquery.ui.core.min.css" rel="stylesheet">
+{% endblock %}
+{% block title %}{{ product.page_title }}{% endblock %}
+
+{% block main %}
+                <div class="col-md-5 col-xs-12 col-sm-12 cover">
+                    <div class="hidden-xs">
+                        <div class="col-md-12 col-xs-12 col-sm-12 cover">
+                            <img src="{{ product.get_cover.thumb_big }}" class="img-responsive" style="float:left;">
+                        </div>
+                        
+                        <div class="col-md-12 col-xs-12 col-sm-12 thumbs" style="margin-top:5px;">
+                        {% for i in product.images.all %}
+                        <div class="col-md-3 col-xs-3 col-sm-3" style="padding-left:0;">
+                            <img src="{{ i.thumb_middle }}" class="img-responsive" style="float:left;">
+                        </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div class="banner visible-xs">
+                        <ul>
+                            {% for i in product.images.all %}
+                            <li>
+                                <img src="{{ i.thumb_big }}" class="img-responsive" >
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-12 col-sm-12 product" data_value="{{ product.id }}">
+                    <div class="title col-md-12 col-xs-12 col-sm-12">
+                        <p class="name">{{ product.name|upper }}</p>
+                        <p class="desc">{{ product.short_description }}</p>
+                        <p class="price">¥{{ product.price }}</p>
+                    </div>
+                    <ul class="link col-md-12 col-xs-12 col-sm-12">
+                        <li><a href="#">COMPOSITION</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="#">SHIPPING</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="#">SIZE GUIDE</a></li>
+                    </ul>
+                    <ul class="color col-md-12 col-xs-12 col-sm-12">
+                        <li option_value="{{ product.color.id }}">
+                            <span style = "background-color:#{{ product.color.color }};"></span>
+                            <label>{{ product.color.name }}</label>
+                        </li>
+                    </ul>
+                    <div class="size col-md-12 col-xs-12 col-sm-12">
+                        <label>SIZE:</label>
+                        <ul class="options">
+                            {% for s in product.size.all %}
+                            <li option_value = "{{ s.id }}"><span class="size-span">{{ s.size }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    <div class="error_message col-md-12 col-xs-12 col-sm-12" style="display:none;">
+                        <span>Please choose the size you want</span>
+                    </div>
+                    </div>
+                    <div class="quantity col-md-5 col-xs-12 col-sm-12">
+                        <label>QUANTITY:</label>
+                        <input type = "text" name = "quantity" class="form_control" id="id_quantity">
+                    </div>
+                    <div class="cart_btn col-md-12 col-xs-12 col-sm-12">
+                    <a href= "javascript:void(0)" data_value="{{ cart.id }}"><span>ADD TO CART</span></a>
+                    <a href="/" class="reverse"><span>CONTINUE SHOPPING</span></a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div id="tab">
+                        <ul>
+                            <li><a href="#tab1">DETAILS</a></li>
+                            <li><a>|</a></li>
+                            <li><a href="#tab2">RETURNS</a></li>
+                        </ul>
+                        <div id="tab1" class="tab-content">
+                            {{ product.long_description|linebreaksbr }}
+                        </div>
+                        <div id="tab2" class="tab-content">
+                            sdafsadfdsafhifadslkfhafl
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12 rec">
+                    <label>RECOMMENDED PRODUCT</label>
+                </div>
+{% endblock %}
+{% block js %}
+<script src="http://cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/touchspin/bootstrap.touchspin.js"></script>
+<script src="/static/minibobi/js/bobi.js"></script>
+<script>
+  $(function() {
+    $(".banner ul").responsiveSlides();
+  });
+</script>
+{% endblock %}

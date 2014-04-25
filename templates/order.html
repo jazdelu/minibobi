@@ -1,0 +1,116 @@
+{% extends "base-page.html" %}
+
+{% block title %}Confirm order{% endblock %}
+
+{% block main %}
+{% if cart.count == 0 %}
+<label>NO ITEM FOUND IN SHOPPING CART!</label>
+{% else %}
+<div class="col-md-6 col-xs-12 col-sm-12 order">
+	<form action ="/order/" class="form-horizontal" role = "form" method="post">
+		{% csrf_token %}	
+		<fieldset>
+		<legend>CONTACT INFORMATION</legend>
+		<div class="form-group" style="display:none;">
+				<label for ="id_cart" class="col-sm-4 control-label">Cart ID</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_cart" name = "cart" value="{{ cart.id }}" />
+			</div>
+		</div>		
+		<div class="form-group">
+				<label for ="id_c_name" class="col-sm-4 control-label">Contact Name</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_c_name" name = "c_name" value="{{ form.c_name.value|default_if_none:"" }}" />
+			</div>
+			<div class="col-sm-8">
+				{{ form.c_name.errors }}
+			</div>
+		</div>
+		<div class="form-group">
+				<label for ="id_c_phone" class="col-sm-4 control-label">Contact Phone</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_c_phone" name = "c_phone" value="{{ form.c_phone.value|default_if_none:"" }}"/>
+			</div>
+			<div class="col-sm-8">
+			{{ form.c_phone.errors }}
+			</div>
+		</div>
+		<div class="form-group">
+				<label for ="id_c_email" class="col-sm-4 control-label">Contact Email</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_c_email" name = "c_email" value="{{ form.c_email.value|default_if_none:"" }}" />
+			</div>
+			<div class="col-sm-8">
+			{{ form.c_email.errors }}
+			</div>
+		</div>
+		</fieldset>
+		<fieldset>
+		<legend>RECEIVER INFORMATION</legend>
+		<div class="form-group">
+				<label for ="id_r_name" class="col-sm-4 control-label">Receiver Name</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_r_name" name = "r_name" value="{{ form.r_name.value|default_if_none:"" }}" />
+			</div>
+			<div class="col-sm-8">
+			{{ form.r_name.errors }}
+			</div>
+		</div>
+		<div class="form-group">
+				<label for ="id_r_phone" class="col-sm-4 control-label">Receiver Phone</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_r_phone" name = "r_phone" value="{{ form.r_phone.value|default_if_none:"" }}"/>
+			</div>
+			<div class="col-sm-8">
+			{{ form.r_phone.errors }}
+			</div>
+		</div>
+		<div class="form-group">
+				<label for ="id_r_address" class="col-sm-4 control-label">Receiver Address</label>
+			<div class="col-sm-8">
+				<textarea class="form-control" id="id_r_address" name="r_address" value="{{ form.r_address.value|default_if_none:"" }}"></textarea>
+			</div>
+			<div class="col-sm-8">
+			{{ form.r_address.errors }}
+			</div>
+		</div>
+		<div class="form-group">
+				<label for ="id_r_postcode" class="col-sm-4 control-label">Receiver Postcode</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_r_postcode" name = "r_postcode" value="{{ form.r_postcode.value|default_if_none:"" }}"/>
+			</div>
+		</div>
+		</fieldset>
+		<fieldset>
+		<legend>MARKUP</legend>
+		<div class="form-group">
+				<label for ="id_markup" class="col-sm-4 control-label">Markup</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id = "id_markup" name = "markup" value="{{ form.markup.value|default_if_none:"" }}"/>
+			</div>
+		</div>
+		</fieldset>
+		</form>
+		<div class="col-md-12 col-xs-12 col-sm-12 cart_btn">
+			<a href="javascript:void(0)" id ="submit"><span>SUBMIT ORDER</span></a>
+			<a href="javascript:void(0)" class="reverse" id="clear"><span>CLEAR ORDER</span></a>
+		</div>
+</div>
+{% endif %}
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+	$("#submit").click(function(){
+		$("form").submit();
+	});
+	$("#clear").click(function(){
+		$("form").find("input[type=text], textarea").val("");
+	});
+	$("#id_c_name").keyup(function(){
+		$("#id_r_name").val($(this).val()); 
+	});
+	$("#id_c_phone").keyup(function(){
+		$("#id_r_phone").val($(this).val()); 
+	});
+</script>
+{% endblock %}

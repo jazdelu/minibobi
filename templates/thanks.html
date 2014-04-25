@@ -1,0 +1,25 @@
+{% extends "base-list.html" %}
+{% block title %}Thanks!{% endblock %}
+{% block main %}
+                <div class="banner">
+                    <ul>
+                        {% for b in banners  %}
+                        <li>
+                            <img src="{{ b.image.url }}" class="img-responsive"/>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                	<h4>Your order has been submited successfully!</h4>
+                	<span>The page will return to homepage in 5 seconds or you can click <a href="/" style="text-decoration:underline;">here</a> to return immediatelly</span>
+                </div>
+{% endblock %}
+
+{% block js %}
+<script>
+	setTimeout(function(){
+		window.location.href="/";
+	},5000);
+</script>
+{% endblock %}

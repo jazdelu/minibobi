@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Jaz">
+
+    <title>Minibobi New Order</title>
+</head>
+<body>
+    <div>New Order For Minibobi：</div><br/>
+    <p>Order Serial: {{ order.serial }} </p>
+    <p>Creation Date: {{ order.creation_date|date:"Y-m-j H:i:s" }}</p>
+    <table style="width:800px;margin-bottom:20px;border:1px solid #ccc;">
+        <caption>Order Detail</caption>
+        <thead  style="background-color:#eee">
+            <tr>
+                <th>Contact Name</th>
+                <th>Contact Phone</th>
+                <th>Contact Email</th>
+                <th>Receiver Name</th>
+                <th>Receiver Phone</th>
+                <th>Receiver Address</th>
+                <th>Receiver Postcode</th>
+                <th>Markup</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ order.c_name }}</td>
+                <td>{{ order.c_phone }}</td>
+                <td>{{ order.c_email }}</td>
+                <td>{{ order.r_name }}</td>
+                <td>{{ order.r_phone }}</td>
+                <td>{{ order.r_address }}</td>
+                <td>{{ order.r_postcode }}</td>
+                <td>{{ order.markup }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="color:#000;width:600px;border:1px solid #ccc;">
+        <caption>Product Detail</caption>
+        <thead  style="background-color:#eee">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Size</th>
+            <th>Color</th>
+        </tr>
+        </thead>
+        <tfoot style="background-color:#eee; border:1px solid #ccc">
+        <tr><td colspan="5" style="font-weight:bold">Total: {{ order.cart.total }}</td></tr>
+        </tfoot>
+        <tbody>
+        {% for i in order.cart.items.all %}
+        <tr>
+            <td>{{ i.product.name }}</td>
+            <td>{{ i.quantity }}</td>
+            <td>{{ i.get_price }}</td>
+            <td>{{ i.size.size }}</td>
+            <td>{{ i.color.name }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>

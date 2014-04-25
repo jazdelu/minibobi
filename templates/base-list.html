@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block wrap %}
+<div class="col-md-3 col-xs-3 col-sm-3  sidebar hidden-xs">
+<aside>
+    <nav>
+        <ul class="nav side-nav">
+            <li><a href="/product/girls/">GIRLS</a>
+                <ul class="nav">  
+                    <li><a href="/product/girls/top/">TOP</a></li>
+                    <li><a href="/product/girls/dress/">DRESS</a></li>
+                    <li><a href="/product/girls/skirt/">SKIRT</a></li>
+                    <li><a href="/product/girls/pants">PANTS</a></li>
+                    <li><a href="/product/girls/cardigan">CARDIGAN</a></li>
+                    <li><a href="/product/girls/accessories">ACCESSORIES</a></li>
+                    <li><a href="/lookbook/">LOOKBOOK</a></li>
+                </ul>
+            </li>
+            <li><a href="#">BOYS</a>
+                <ul class="nav">  
+                    <li><a href="/product/boys/tshirt/">TSHIRT</a></li>
+                    <li><a href="/product/boys/polo/">POLO</a></li>
+                    <li><a href="/product/boys/shirt/">SHIRT</a></li>
+                    <li><a href="/product/boys/pants/">PANTS</a></li>
+                    <li><a href="/product/boys/cardigan">CARDIGAN</a></li>
+                    <li><a href="/product/boysaccessories/">ACCESSORIES</a></li>
+                    <li><a href="#">LOOKBOOK</a></li>
+                </ul>
+            </li>
+            <li><a href="/lookbook/">LOOKBOOK</a></li>
+            <li><a href="/product/sales/">SALES</a></li>
+            <li><a href="#">ACCESORIES</a>
+                <ul class="nav">  
+                    <li><a href="#">MINI BOBI</a></li>
+                    <li><a href="#">ANA</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
+</div>
+
+<div class="col-md-9 col-xs-12 col-sm-9" role="main">
+{% block main %}
+{% endblock %}
+</div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
