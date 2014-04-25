@@ -3,24 +3,15 @@
 {% block main %}
 {% load staticfiles %}
                 {% if category.banner %}
-                <div class="banner" style="background:url('{{ category.banner.url }}');background-size:100%;">
+                <div class="banner" style="background:url('{{ category.banner.url }}');background-size:100%;padding:80px 20px;">
                 {% else %}
-                <div class="banner" style="background:url('{{ category.parent.banner.url }}');background-size:100%;">
+                <div class="banner" style="background:url('{{ category.parent.banner.url }}');background-size:100%;padding:80px 20px;">
                 {% endif %}
                     {% if category.parent %}
                     <h1>{{ category.parent.name|upper }}</h1>
                     {% endif %}
                     <h1>{{ category.name|upper }}</h1>
                     
-                </div>
-                <div class="banner">
-                    <ul>
-                        <li>
-                            {% if category.banner  %}
-                            <img src="{{ category.banner.url }}" />
-                            {% endif%}
-                        </li>
-                    </ul>
                 </div>
                 <div class="items">
                     {% for p in products %}
