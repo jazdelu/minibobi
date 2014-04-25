@@ -71,7 +71,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates/'),
-)
+)   
 
 ROOT_URLCONF = 'minibobi.urls'
 
@@ -142,3 +142,33 @@ EMAIL_HOST_USER = 'robot@minibobi.com'
 EMAIL_HOST_PASSWORD = 'lushizhao1129'
 DEFAULT_FROM_EMAIL = 'robot@minibobi.com'
 SERVER_EMAIL = 'robot@minibobi.com'
+
+
+SUIT_CONFIG = {
+    # header
+    'ADMIN_NAME': 'Minibobi Website Manager',
+    'HEADER_DATE_FORMAT': 'Y-m-d',
+    'HEADER_TIME_FORMAT': 'H:i',
+
+    # forms
+    # 'SHOW_REQUIRED_ASTERISK': True,  # Default True
+    # 'CONFIRM_UNSAVED_CHANGES': True, # Default True
+
+    # menu
+    'MENU':(
+        {'app':'auth','label':u'User','icon':'icon-user'},
+        {'app':'banner','label':u'Banner','icon':' icon-eye-open'},
+        {'app':'lookbook','label':u'Lookbook','icon': 'icon-picture'}
+        {'app':'page','label':u'Page','icon':'icon-bookmark'},
+        {'app':'product','label':u'Product','icon':'icon-shopping-cart'}
+        {'app':'order','label':u'Order','icon':'icon-time'}
+    ),
+    # 'SEARCH_URL': '/admin/auth/user/',
+
+    'MENU_OPEN_FIRST_CHILD': True, # Default True
+    # 'MENU_EXCLUDE': ('auth.group',),
+
+
+    # misc
+    'LIST_PER_PAGE': 10
+}
