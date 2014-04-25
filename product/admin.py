@@ -18,7 +18,7 @@ class CollectionAdmin(admin.ModelAdmin):
 
 admin.site.register(Collection,CollectionAdmin)
 
-class ColorAdmin(TranslationAdmin):
+class ColorAdmin(admin.ModelAdmin):
 	list_display = ('name','color')
 	fields = ('name','color')
 	form = ColorAdminForm
@@ -60,7 +60,7 @@ class ImageInline(admin.TabularInline):
 	extra = 1
 
 
-class ProductAdmin(TranslationAdmin):
+class ProductAdmin(admin.ModelAdmin):
 	list_display = ('name','short_description','collection','category','discount','pub_date_format')
 	fieldsets = (
 		(_('Basic Information'), {
