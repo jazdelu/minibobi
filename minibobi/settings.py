@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'lookbook',
     'page',
     'banner',
+    'south',
     'modeltranslation',
 )
 
