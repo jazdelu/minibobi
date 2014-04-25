@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'minibobi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME' : 'minibobi',
+        'NAME' : 'bobi',
         'USER': 'jazdelu',
     'PASSWORD':'lushizhao1129',
     }
