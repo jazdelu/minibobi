@@ -107,7 +107,6 @@ LANGUAGES = (
     ('zh', gettext('Chinese')),
     ('en', gettext('English')),
 )
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'zh'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
