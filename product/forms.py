@@ -4,9 +4,9 @@ from django.forms import *
 from suit.widgets import *
 class ColorAdminForm(ModelForm):
 	class Media:
-		js = ('/static/minibobi/js/jquery-1.8.3.min.js','/static/color/js/pick-a-color-1.1.8.min.js','/static/color/js/tinycolor-0.9.15.min.js','/static/minibobi/js/color.js')
+		js = ('http://minibobi.qiniudn.com/static/minibobi/js/jquery-1.8.3.min.js','http://minibobi.qiniudn.com/static/color/js/pick-a-color-1.1.8.min.js','/static/color/js/tinycolor-0.9.15.min.js','/static/minibobi/js/color.js')
 		css ={
-			"all": ('/static/color/css/pick-a-color-1.2.2.min.css','/static/minibobi/css/admin_extra.css')
+			"all": ('http://minibobi.qiniudn.com/static/color/css/pick-a-color-1.2.2.min.css','http://minibobi.qiniudn.com/static/minibobi/css/admin_extra.css')
 		}
 		
 
