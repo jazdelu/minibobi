@@ -47,7 +47,6 @@ INSTALLED_APPS = (
     'page',
     'banner',
     'south',
-    'rosetta',
     'modeltranslation',
 )
 
