@@ -1,21 +1,17 @@
 {% extends "base-page.html" %}
 {% block title %}Lookbook{% endblock %}
 {% block main %}
-                <div class="col-md-12 lookbook">
+                <div class="col-md-12 col-sm-12 col-xs-12 lookbook">
                     <div class="title">
                         <h1>LOOKBOOK</h1>
                         <h3>SPRING/SUMMER 2014</h3>
                     </div>
-                    <img src="../static/minibobi/images/banner1.jpg">
                 </div>
-                <div class="col-md-6 lookbook">
-                    <img src="../static/minibobi/images/banner1.jpg">
+                {% for l in lookbooks %}
+                {% for i in l.images.all %}
+                <div class="col-md-12 col-sm-12 col-xs-12 lookbook">
+                    <img src="{{ i.image.url }}" class="img-responsive" style="margin:0 auto;">
                 </div>
-                <div class="col-md-6 lookbook">
-                    <img src="../static/minibobi/images/banner1.jpg">
-                </div>
-                <div class="col-md-12 lookbook">
-                    <img src="../static/minibobi/images/banner1.jpg">
-                </div>
-
+                {% endfor %}
+                {% endfor %}
 {% endblock %}

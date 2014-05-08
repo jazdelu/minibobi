@@ -1,4 +1,4 @@
-#coding:utf8
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 from order.models import Express, Order
 from django.utils.translation import ugettext_lazy as _

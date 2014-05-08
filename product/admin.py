@@ -60,7 +60,7 @@ class ImageInline(admin.TabularInline):
 	extra = 1
 
 
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslationAdmin):
 	list_display = ('name','short_description','collection','category','discount','pub_date_format')
 	fieldsets = (
 		(_('Basic Information'), {

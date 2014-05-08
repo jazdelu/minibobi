@@ -1,4 +1,4 @@
-#coding:utf8
+# -*- coding: utf-8 -*-
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 """
 Django settings for minibobi project.
@@ -47,6 +47,8 @@ INSTALLED_APPS = (
     'page',
     'banner',
     'south',
+    'rosetta',
+    'modeltranslation',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -94,7 +96,6 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -104,17 +105,19 @@ USE_L10N = True
 
 USE_TZ = False
 
-gettext = lambda s: s
+LANGUAGE_CODE = 'en-US'
+
+ugettext = lambda s: s
 
 LANGUAGES = (
-    ('zh', gettext('Chinese')),
-    ('en', gettext('English')),
+    ('zh-cn', ugettext(u'简体中文')),
+    ('en', ugettext(u'English')),
 )
-
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/')
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
-
 
 
 STATICFILES_FINDERS = (

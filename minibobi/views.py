@@ -25,8 +25,7 @@ def about(request):
 
 def set_language(request):
 	if request.GET:
-		user_language = 'zh'
-		translation.activate(user_language)
+		translation.activate('zh')
 		response = HttpResponseRedirect('/')
-		response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+		response.set_cookie(settings.LANGUAGE_COOKIE_NAME, 'zh')
 	return response

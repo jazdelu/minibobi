@@ -16,7 +16,7 @@ class Lookbook(models.Model):
 class Image(models.Model):
 
 	image = models.ImageField(upload_to='lookbook/', verbose_name = _('Image'))
-	lookbook = models.ForeignKey(Lookbook)
+	lookbook = models.ForeignKey(Lookbook, related_name = 'images')
 	class Meta:
 		verbose_name = _('Image')
 		verbose_name_plural = _('Image')

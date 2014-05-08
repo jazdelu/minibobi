@@ -2,16 +2,15 @@
 {% block title %}{{ title }}{% endblock %}
 {% block main %}
 {% load staticfiles %}
-                {% if category.banner %}
-                <div class="banner" style="background:url('{{ category.banner.url }}');background-size:100%;padding:80px 20px;">
-                {% else %}
-                <div class="banner" style="background:url('{{ category.parent.banner.url }}');background-size:100%;padding:80px 20px;">
-                {% endif %}
-                    {% if category.parent %}
-                    <h1>{{ category.parent.name|upper }}</h1>
-                    {% endif %}
-                    <h1>{{ category.name|upper }}</h1>
-                    
+                <div class="banner">
+                    <ul>
+                        <li>
+                            <img src="{{ category.banner.url }}" class="img-responsive"/>
+                            <div class="i">
+                                <h3>{{ category.name }}</h3>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="items">
                     {% for p in products %}
@@ -25,7 +24,7 @@
                             </a>
                         </div>
                         <div class="brief">
-                        <p><a href="/product/{{ p.id }}">{{ p.name }}</a></p>
+                        <p><a href="/product/{{ p.id }}/">{{ p.name }}</a></p>
                         <p>
                         {% if p.is_discount %}
                         <span style="text-decoration:line-through;">¥{{ p.price }}</span>
@@ -36,7 +35,7 @@
                         </p>
                         </div>
                         <div class="cart_btn">
-                        <a href= "/product/{{ p.id }}"><span>VIEW PRODUCT</span></a>
+                        <a href= "/product/{{ p.id }}/"><span>VIEW PRODUCT</span></a>
                         </div>
                     </div>
                     {% empty %}

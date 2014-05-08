@@ -1,5 +1,4 @@
-#coding:utf8
-
+# -*- coding: utf-8 -*-
 from django.forms import *
 from suit.widgets import *
 class ColorAdminForm(ModelForm):

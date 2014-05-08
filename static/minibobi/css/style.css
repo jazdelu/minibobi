@@ -43,11 +43,18 @@ h1,h2,h3,h4,h5,h6{
 h4,h5,h6{
 	font-weight: normal;
 }
+a{
+	font-size: 1rem;
+}
 a:hover{
-	text-decoration:none;
 	color:#000; 
 	background-color:transparent;
 	background-color: #fff;
+}
+
+a.active{
+	text-decoration: underline;
+	color:#000;
 }
 
 
@@ -84,9 +91,22 @@ a:hover{
 	position: relative;
 	padding-bottom: 1em;
 }
+.top{
+	margin-top: 5px;
+}
 .top ul>li>a{
 	padding: 2px 5px
 }
+.language-form{
+	display: inline-block;
+}
+.language-form select{
+   width: 180px;
+   overflow: hidden;
+   background-color: #fff;
+   border: 1px solid #ccc;
+}
+
 .logo{
 	text-align: right;
 	position: relative;
@@ -178,13 +198,14 @@ a:hover{
 .main-nav >li>a{
 	color:#9e9e9e;
 	background-color: transparent;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	padding-top:20px;
 	padding-bottom:20px;
 }
 .main-nav >li>a:hover{
 	color:#333;
 	background-color: transparent;
+	text-decoration: underline;
 }
 
 /*---------------Banner--------------*/
@@ -218,6 +239,11 @@ a:hover{
   margin: 0 auto;
 }
 
+.banner .i{
+	position: absolute;
+	left:20px;
+	top:40%;
+}
 
 
 
@@ -230,20 +256,23 @@ aside{
 }
 .side-nav > li > a{
 	color:#1b1b1b;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 	margin-top: 10px;
 }
 .side-nav > li > a:first{
 	color:#1b1b1b;
-	font-size: 1rem;
-
+	font-size: 1.5rem;
 	font-weight: bold;
 	margin-top: 0px;
 }
+.side-nav > li > a:hover{
+	text-decoration: underline;
+}
+
 .side-nav > li >ul>li>a{
 	color:#9e9e9e;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	padding-top: 0px;
 	padding-bottom: :0px;
 }
@@ -253,6 +282,7 @@ aside{
 	font-size: 0.875rem;
 	padding-top: 0px;
 	padding-bottom: :0px;
+	text-decoration: underline;
 }
 .item{
 	padding: 10px;
@@ -365,11 +395,10 @@ aside{
 .lookbook{
 	margin-bottom: .5em;
 	position: relative;
+	text-align: center;
 }
 .lookbook .title{
-	position: absolute;
-	top:1em;
-	left: 2em;
+	text-align: left;
 }
 .discount{
 	width: 30%;
