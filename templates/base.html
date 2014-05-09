@@ -13,7 +13,7 @@
     <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 
-    <link href="http://minibobi.qiniudn.com/static/minibobi/css/style.css" rel="stylesheet" type="text/css">
+    <link href="http://minibobi.qiniudn.com/static/minibobi/css/minibobi.css" rel="stylesheet" type="text/css">
     {% block css %}
     {% endblock %}
     <title>{% block title %}{% endblock %}</title>
@@ -37,7 +37,7 @@
                 </select>
                 </form>
                 <ul class="nav navbar-nav navbar-right ">
-                    <li><a><span>CALL US AT 131231</span></a></li>
+                    <li><a><span>{% trans "CALL US AT" %} 131231</span></a></li>
                     <li><a><span>|</span></a></li>
                     <li><a href="/cart/"><span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a></li>
                     <li><a><span>|</span></a></li>
