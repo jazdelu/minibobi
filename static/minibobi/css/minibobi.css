@@ -529,7 +529,8 @@ aside{
 }
 .product .size ul li{
 	float: left;
-	padding-right: 20px;
+	padding-right: 10px;
+	margin-top: 3px;
 	list-style-type: none;
 }
 .product .size ul li span{

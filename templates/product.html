@@ -90,7 +90,7 @@
                 <div class="col-md-12 col-xs-12 col-sm-12 rec">
                     <h4><label>{% trans "RECOMMEND PRODUCT" %}</label></h4>
                     {% for p in products %}
-                    <div class="col-md-3 col-xs-3 col-sm-3">
+                    <div class="col-md-3 col-xs-6 col-sm-6">
                        <a href="/product/{{ p.id }}"><img src="{{ p.get_cover.thumb_middle }}" class="img-responsive"></a>
                     </div>
                     {% endfor %}
