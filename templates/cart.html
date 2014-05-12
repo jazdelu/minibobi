@@ -80,8 +80,8 @@
                 </div>
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="http://minibobi.qiniudn.com/static/touchspin/bootstrap.touchspin.js"></script>
-<script src="http://minibobi.qiniudn.com/static/minibobi/js/bobi.js"></script>
+<script type="text/javascript" src="/static/touchspin/bootstrap.touchspin.js"></script>
+<script src="/static/minibobi/js/bobi.js"></script>
 <script>
 $(".form_control[name='quantity']").change(function(){
     window.location.href="/cart/update/?iid="+$(this).attr("value_data")+"&quantity="+$(this).val();
