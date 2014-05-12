@@ -1,4 +1,5 @@
 {% extends "base-list.html" %}
+{% load i18n %}
 {% block title %}{{ title }}{% endblock %}
 {% block main %}
 {% load staticfiles %}
@@ -35,11 +36,11 @@
                         </p>
                         </div>
                         <div class="cart_btn">
-                        <a href= "/product/{{ p.id }}/"><span>VIEW PRODUCT</span></a>
+                        <a href= "/product/{{ p.id }}/"><span>{% trans "VIEW PRODUCT" %}</span></a>
                         </div>
                     </div>
                     {% empty %}
-                    <label>No Product</label>
+                    <label>{% trans "No Product" %}</label>
                     {% endfor %}
                 </div>
 {% endblock %}

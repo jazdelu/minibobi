@@ -1,16 +1,16 @@
 {% extends "base-page.html" %}
-
-{% block title %}Confirm order{% endblock %}
+{% load i18n %}
+{% block title %}{% trans "Confirm order" %}{% endblock %}
 
 {% block main %}
 {% if cart.count == 0 %}
-<label>NO ITEM FOUND IN SHOPPING CART!</label>
+<label>{% trans "NO ITEM FOUND IN SHOPPING CART" %}!</label>
 {% else %}
 <div class="col-md-6 col-xs-12 col-sm-12 order">
 	<form action ="/order/" class="form-horizontal" role = "form" method="post">
 		{% csrf_token %}	
 		<fieldset>
-		<legend>CONTACT INFORMATION</legend>
+		<legend>{% trans "CONTACT INFORMATION" %}</legend>
 		<div class="form-group" style="display:none;">
 				<label for ="id_cart" class="col-sm-4 control-label">Cart ID</label>
 			<div class="col-sm-8">
@@ -18,7 +18,7 @@
 			</div>
 		</div>		
 		<div class="form-group">
-				<label for ="id_c_name" class="col-sm-4 control-label">Contact Name</label>
+				<label for ="id_c_name" class="col-sm-4 control-label">{% trans "Contact Name" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_c_name" name = "c_name" value="{{ form.c_name.value|default_if_none:"" }}" />
 			</div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-				<label for ="id_c_phone" class="col-sm-4 control-label">Contact Phone</label>
+				<label for ="id_c_phone" class="col-sm-4 control-label">{% trans "Contact Phone" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_c_phone" name = "c_phone" value="{{ form.c_phone.value|default_if_none:"" }}"/>
 			</div>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-				<label for ="id_c_email" class="col-sm-4 control-label">Contact Email</label>
+				<label for ="id_c_email" class="col-sm-4 control-label">{% trans "Contact Email" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_c_email" name = "c_email" value="{{ form.c_email.value|default_if_none:"" }}" />
 			</div>
@@ -48,7 +48,7 @@
 		<fieldset>
 		<legend>RECEIVER INFORMATION</legend>
 		<div class="form-group">
-				<label for ="id_r_name" class="col-sm-4 control-label">Receiver Name</label>
+				<label for ="id_r_name" class="col-sm-4 control-label">{% trans "Receiver Name" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_r_name" name = "r_name" value="{{ form.r_name.value|default_if_none:"" }}" />
 			</div>
@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-				<label for ="id_r_phone" class="col-sm-4 control-label">Receiver Phone</label>
+				<label for ="id_r_phone" class="col-sm-4 control-label">{% trans "Receiver Phone" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_r_phone" name = "r_phone" value="{{ form.r_phone.value|default_if_none:"" }}"/>
 			</div>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-				<label for ="id_r_address" class="col-sm-4 control-label">Receiver Address</label>
+				<label for ="id_r_address" class="col-sm-4 control-label">{% trans "Receiver Address" %}</label>
 			<div class="col-sm-8">
 				<textarea class="form-control" id="id_r_address" name="r_address" value="{{ form.r_address.value|default_if_none:"" }}"></textarea>
 			</div>
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-				<label for ="id_r_postcode" class="col-sm-4 control-label">Receiver Postcode</label>
+				<label for ="id_r_postcode" class="col-sm-4 control-label">{% trans "Receiver Postcode" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_r_postcode" name = "r_postcode" value="{{ form.r_postcode.value|default_if_none:"" }}"/>
 			</div>
@@ -84,7 +84,7 @@
 		<fieldset>
 		<legend>MARKUP</legend>
 		<div class="form-group">
-				<label for ="id_markup" class="col-sm-4 control-label">Markup</label>
+				<label for ="id_markup" class="col-sm-4 control-label">{% trans "Markup" %}</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id = "id_markup" name = "markup" value="{{ form.markup.value|default_if_none:"" }}"/>
 			</div>
@@ -92,8 +92,8 @@
 		</fieldset>
 		</form>
 		<div class="col-md-12 col-xs-12 col-sm-12 cart_btn">
-			<a href="javascript:void(0)" id ="submit"><span>SUBMIT ORDER</span></a>
-			<a href="javascript:void(0)" class="reverse" id="clear"><span>CLEAR ORDER</span></a>
+			<a href="javascript:void(0)" id ="submit"><span>{% trans "SUBMIT ORDER" %}</span></a>
+			<a href="javascript:void(0)" class="reverse" id="clear"><span>{% trans "CLEAR ORDER" %}</span></a>
 		</div>
 </div>
 {% endif %}

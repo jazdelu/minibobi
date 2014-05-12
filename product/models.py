@@ -97,6 +97,7 @@ class Product(models.Model):
 	color = models.ForeignKey(Color,related_name='products')
 	size = models.ManyToManyField(Size,related_name = 'products')
 	discount= models.ForeignKey(Discount,blank= True, null = True)
+	is_recommend = models.BooleanField(verbose_name = 'Add this product to Recommend Product')
 	long_description = models.TextField(blank = True,verbose_name = _('Long Description'))
 	page_title = models.CharField(max_length=128,blank = True,verbose_name = _('Page Title'),help_text = _('Overwrites what is displayed at the top of your browser or in bookmarks'))
 	description_meta = models.TextField(blank = True,verbose_name = _('Description Meta Tag'),help_text = _('A description of the page sometimes used by search engines.'))

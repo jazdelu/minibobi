@@ -13,7 +13,7 @@
     <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="http://minibobi.qiniudn.com/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 
-    <link href="http://minibobi.qiniudn.com/static/minibobi/css/minibobi.css" rel="stylesheet" type="text/css">
+    <link href="/static/minibobi/css/minibobi.css" rel="stylesheet" type="text/css">
     {% block css %}
     {% endblock %}
     <title>{% block title %}{% endblock %}</title>
@@ -37,6 +37,7 @@
                 </select>
                 </form>
                 <ul class="nav navbar-nav navbar-right ">
+                {% load i18n %}
                     <li><a><span>{% trans "CALL US AT" %} 131231</span></a></li>
                     <li><a><span>|</span></a></li>
                     <li><a href="/cart/"><span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a></li>
@@ -61,30 +62,30 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{% trans "GIRLS" %}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
                         <ul class="dropdown-menu wideMenuItem">  
-                            <li><a href="/product/girls/top/">TOP</a></li>
-                            <li><a href="/product/girls/dress/">DRESS</a></li>
-                            <li><a href="/product/girls/skirt/">SKIRT</a></li>
-                            <li><a href="/product/girls/pants">PANTS</a></li>
-                            <li><a href="/product/girls/cardigan">CARDIGAN</a></li>
-                            <li><a href="/product/girls/accessories">ACCESSORIES</a></li>
-                            <li><a href="/lookbook/">LOOKBOOK</a></li>
+                            <li><a href="/product/girls/top/">{% trans "TOP" %}</a></li>
+                            <li><a href="/product/girls/dress/">{% trans "DRESS" %}</a></li>
+                            <li><a href="/product/girls/skirt/">{% trans "SKIRT" %}</a></li>
+                            <li><a href="/product/girls/pants">{% trans "PANTS" %}</a></li>
+                            <li><a href="/product/girls/cardigan">{% trans "CARDIGAN" %}</a></li>
+                            <li><a href="/product/girls/accessories">{% trans "ACCESSORIES" %}</a></li>
+                            <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{% trans "BOYS" %}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
                         <ul class="dropdown-menu wideMenuItem">  
-                            <li><a href="/product/boys/tshirt/">TSHIRT</a></li>
-                            <li><a href="/product/boys/polo/">POLO</a></li>
-                            <li><a href="/product/boys/shirt/">SHIRT</a></li>
-                            <li><a href="/product/boys/pants/">PANTS</a></li>
-                            <li><a href="/product/boys/cardigan">CARDIGAN</a></li>
-                            <li><a href="/product/boysaccessories/">ACCESSORIES</a></li>
-                            <li><a href="/lookbook/">LOOKBOOK</a></li>
+                            <li><a href="/product/boys/tshirt/">{% trans "TSHIRT" %}</a></li>
+                            <li><a href="/product/boys/polo/">{% trans "POLO" %}</a></li>
+                            <li><a href="/product/boys/shirt/">{% trans "SHIRT" %}</a></li>
+                            <li><a href="/product/boys/pants/">{% trans "PANTS" %}</a></li>
+                            <li><a href="/product/boys/cardigan">{% trans "CARDIGAN" %}</a></li>
+                            <li><a href="/product/boysaccessories/">{% trans "ACCESSORIES" %}</a></li>
+                            <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
                         </ul>
                     </li>
-                    <li><a href="/lookbook/"><span>LOOKBOOK</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="/about/"><span>ABOUT</span><span  class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="/contact/"><span>CONTACT</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="#"><span>BLOG</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="/lookbook/"><span>{% trans "LOOKBOOK" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="/about/"><span>{% trans "ABOUT" %}</span><span  class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="/contact/"><span>{% trans "CONTACT" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="#"><span>{% trans "BLOG" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
                 </ul>
             </div>
                 <div class="col-md-7 col-sm-7 col-xs-12 hidden-xs logo">
@@ -102,12 +103,12 @@
             <div class="col-md-12 col-sm-12 navbar hidden-xs">
                 <nav>
                     <ul class="nav navbar-nav main-nav">
-                        <li><a href="/product/boys/">BOYS</a></li>
-                        <li><a href="/product/girls/">GIRLS</a></li>
-                        <li><a href="/lookbook/">LOOKBOOK</a></li>
-                        <li><a href="/about/">ABOUT</a></li>
-                        <li><a href="/contact/">CONTACT</a></li>
-                        <li><a href="#">BLOG</a></li>
+                        <li><a href="/product/boys/">{% trans "BOYS" %}</a></li>
+                        <li><a href="/product/girls/">{% trans "GIRLS" %}</a></li>
+                        <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
+                        <li><a href="/about/">{% trans "ABOUT" %}</a></li>
+                        <li><a href="/contact/">{% trans "CONTACT" %}</a></li>
+                        <li><a href="#">{% trans "BLOG" %}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -123,23 +124,23 @@
             <nav>
                 <ul class="nav col-md-4 col-sm-4 col-xs-6 foot-nav foot-nav-left">
                     <li>MINI BOBI</li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Press review</a></li>
-                    <li><a href="#">Stocklists</a></li>
+                    <li><a href="#">{% trans "About" %}</a></li>
+                    <li><a href="#">{% trans "Contact" %}</a></li>
+                    <li><a href="#">{% trans "Blog" %}</a></li>
+                    <li><a href="#">{% trans "Press review" %}</a></li>
+                    <li><a href="#">{% trans "Stockists" %}</a></li>
                 </ul>
                 <ul class="nav col-md-4 col-sm-4 col-xs-6 foot-nav foot-nav-middle">
                     <li>E-SHOP</li>
-                    <li><a href="#">Payment</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Return</a></li>
-                    <li><a href="#">General terms and conditions of sales</a></li>
+                    <li><a href="#">{% trans "Payment" %}</a></li>
+                    <li><a href="#">{% trans "Shipping" %}</a></li>
+                    <li><a href="#">{% trans "Return" %}</a></li>
+                    <li><a href="#">{% trans "General terms and conditions of sales" %}</a></li>
                 </ul>
                 <ul class="nav col-md-4 col-sm-4 col-xs-12 foot-nav foot-nav-right">
-                    <li><a href="#">SIZE GUIDE</a></li>
-                    <li><a href="#">NEWSLETTER SUBSCRIPTION</a>
-                        <p>Receive our news and customized offers by subscribing to our newsletter</p>
+                    <li><a href="#">{% trans "SIZE GUIDE" %}</a></li>
+                    <li><a href="#">{% trans "NEWSLETTER SUBSCRIPTION" %}</a>
+                        <a>{% trans "Receive our news and customized offers by subscribing to our newsletter" %}</a>
                     </li>
                 </ul>
             </nav>

@@ -31,7 +31,9 @@ def get_product_by_id(request,pid):
 		product = Product.objects.get(id = pid)
 	except Product.DoesNotExist:
 		raise Http404
-	return render_to_response('product.html',{'product':product},context_instance = RequestContext(request))
+
+	products = Product.objects.filter(is_recommend = True)
+	return render_to_response('product.html',{'product':product, 'products':products},context_instance = RequestContext(request))
 
 
 

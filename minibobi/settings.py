@@ -105,7 +105,7 @@ USE_L10N = True
 
 USE_TZ = False
 
-LANGUAGE_CODE = 'en-US'
+LANGUAGE_CODE = 'en_US'
 
 ugettext = lambda s: s
 
@@ -113,9 +113,7 @@ LANGUAGES = (
     ('zh-cn', ugettext(u'简体中文')),
     ('en', ugettext(u'English')),
 )
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale/')
-)
+LOCALE_PATHS = ( os.path.join(BASE_DIR, 'locale/'), )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -138,7 +136,6 @@ QINIU_SECRET_KEY='f8xbN8LewTLJx1ZMfC0n5uLa_6zuD-OXoDhwv_Vg'
 QINIU_BUCKET_NAME='minibobi'
 QINIU_BUCKET_DOMAIN='minibobi.qiniudn.com'
 DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuMediaStorage'
-STATICFILES_STORAGE  = 'qiniustorage.backends.QiniuStaticStorage'
 
 
 EMAIL_HOST = 'smtp.exmail.qq.com'

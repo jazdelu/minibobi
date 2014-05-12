@@ -64,7 +64,7 @@ class ProductAdmin(TranslationAdmin):
 	list_display = ('name','short_description','collection','category','discount','pub_date_format')
 	fieldsets = (
 		(_('Basic Information'), {
-			'fields':('serial','stock','name','short_description','long_description')
+			'fields':('serial','stock','name','short_description','long_description','is_recommend')
 		}),
 		(_('Price Information'),{
 			'fields':('price','discount')

@@ -28,14 +28,14 @@ def serial_generator():
 class Order(models.Model):
 	serial = models.CharField(max_length = 128,unique = True, verbose_name = _('Serial Number'))
 	cart = models.ForeignKey(Cart)
-	c_name = models.CharField(max_length = 128,verbose_name=_('Contact Name'))
-	c_phone = models.CharField(max_length = 128,verbose_name=_('Contact Phone'))
-	c_email = models.EmailField(max_length = 128,verbose_name=_('Contact Email'))
-	r_name = models.CharField(max_length = 128,verbose_name=_('Receiver Name'))
-	r_phone = models.CharField(max_length = 128,verbose_name=_('Receiver Phone'))
-	r_address = models.TextField(max_length = 128,verbose_name = _('Receiver Address'))
-	r_postcode = models.CharField(max_length = 128, blank = True, null = True,verbose_name = _('Receiver Postcode'))
-	markup = models.CharField(max_length = 1024,blank = True, null = True,verbose_name = _('Mark up'))
+	c_name = models.CharField(max_length = 128,verbose_name='Contact Name')
+	c_phone = models.CharField(max_length = 128,verbose_name='Contact Phone')
+	c_email = models.EmailField(max_length = 128,verbose_name='Contact Email')
+	r_name = models.CharField(max_length = 128,verbose_name='Receiver Name')
+	r_phone = models.CharField(max_length = 128,verbose_name='Receiver Phone')
+	r_address = models.TextField(max_length = 128,verbose_name = 'Receiver Address')
+	r_postcode = models.CharField(max_length = 128, blank = True, null = True,verbose_name = 'Receiver Postcode')
+	markup = models.CharField(max_length = 1024,blank = True, null = True,verbose_name = 'Mark up')
 	status = models.CharField(max_length = 128, choices = STATUS_CHOICES, default = 'new')
 	express = models. CharField(max_length = 128,blank = True, null = True )
 	enum = models.CharField(max_length = 128,blank = True, null = True)
@@ -44,7 +44,7 @@ class Order(models.Model):
 
 	class Meta:
 		verbose_name = _('Order')
-		verbose_name_plural = _('Order')
+		verbose_name_plural = ('Order')
 		ordering = ['-creation_date']
 
 	def __unicode__(self):
