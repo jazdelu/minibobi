@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-12 20:53+0800\n"
+"POT-Creation-Date: 2014-05-12 23:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgid "Homepage"
 msgstr ""
 
 #: banner/models.py:9 lookbook/models.py:18 lookbook/models.py:21
-#: lookbook/models.py:22 product/models.py:153 product/models.py:156
-#: product/models.py:157
+#: lookbook/models.py:22 product/models.py:154 product/models.py:157
+#: product/models.py:158
 msgid "Image"
 msgstr ""
 
@@ -68,11 +68,11 @@ msgstr ""
 
 #: order/admin.py:31
 msgid "Contact Information"
-msgstr ""
+msgstr "联系人信息"
 
 #: order/admin.py:34
 msgid "Receiver Information"
-msgstr ""
+msgstr "收件人信息"
 
 #: order/admin.py:38
 msgid "Order Detail"
@@ -226,39 +226,39 @@ msgstr ""
 msgid "Stock"
 msgstr ""
 
-#: product/models.py:100
+#: product/models.py:101
 msgid "Long Description"
 msgstr ""
 
-#: product/models.py:101
+#: product/models.py:102
 msgid "Page Title"
 msgstr ""
 
-#: product/models.py:101
+#: product/models.py:102
 msgid "Overwrites what is displayed at the top of your browser or in bookmarks"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:103
 msgid "Description Meta Tag"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:103
 msgid "A description of the page sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:104
 msgid "Keywords Meta Tag"
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:104
 msgid "A list of comma separated keywords sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:108 product/models.py:109
+#: product/models.py:109 product/models.py:110
 msgid "Product"
 msgstr ""
 
-#: product/models.py:154
+#: product/models.py:155
 msgid "Set this image to product cover?"
 msgstr ""
 
@@ -414,7 +414,7 @@ msgstr "数量"
 msgid "AMOUNT"
 msgstr "合计"
 
-#: templates/cart.html:17 templates/cart.html.py:69
+#: templates/cart.html:17 templates/cart.html.py:70
 msgid "DELETE"
 msgstr "删除"
 
@@ -422,15 +422,15 @@ msgstr "删除"
 msgid "TOTAL"
 msgstr "总计"
 
-#: templates/cart.html:50 templates/cart.html.py:73
+#: templates/cart.html:50 templates/cart.html.py:74
 msgid "The cart is empty!"
 msgstr "购物车是空的"
 
-#: templates/cart.html:77 templates/product.html:72
+#: templates/cart.html:78 templates/product.html:72
 msgid "CONTINUE SHOPPING"
 msgstr "继续购物"
 
-#: templates/cart.html:78
+#: templates/cart.html:79
 msgid "CONFIRM ORDER"
 msgstr "确认订单"
 
@@ -466,6 +466,10 @@ msgstr "联系人电话"
 msgid "Contact Email"
 msgstr "联系人邮箱"
 
+#: templates/order.html:49
+msgid "RECEIVER INFORMATION"
+msgstr "收件人信息"
+
 #: templates/order.html:51
 msgid "Receiver Name"
 msgstr "收件人姓名"
@@ -481,6 +485,10 @@ msgstr "收件人地址"
 #: templates/order.html:78
 msgid "Receiver Postcode"
 msgstr "收件人邮编"
+
+#: templates/order.html:85
+msgid "MARKUP"
+msgstr "备注信息"
 
 #: templates/order.html:87
 msgid "Markup"
@@ -519,7 +527,8 @@ msgid "RETURNS"
 msgstr "退换货"
 
 #: templates/product.html:91
-msgid "RECOMMENDED PRODUCT"
+#, fuzzy
+msgid "RECOMMEND PRODUCT"
 msgstr "推荐产品"
 
 #~ msgid "Mark up"
