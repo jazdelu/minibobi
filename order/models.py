@@ -10,6 +10,10 @@ STATUS_CHOICES=(
     (u'complete',_('Complete')),
     (u'discard',_('Discard')),
 )
+DELIVERY_CHOICES = (
+		('0','Free Delivery'),
+		('50','50RMB Rush Service'),
+)
 
 class Express(models.Model):
 	name = models.CharField(max_length = 128,verbose_name = _('Name'))
@@ -37,8 +41,7 @@ class Order(models.Model):
 	r_postcode = models.CharField(max_length = 128, blank = True, null = True,verbose_name = 'Receiver Postcode')
 	markup = models.CharField(max_length = 1024,blank = True, null = True,verbose_name = 'Mark up')
 	status = models.CharField(max_length = 128, choices = STATUS_CHOICES, default = 'new')
-	express = models. CharField(max_length = 128,blank = True, null = True )
-	enum = models.CharField(max_length = 128,blank = True, null = True)
+	delivery = models.CharField(max_length = 128,choices = DELIVERY_CHOICES,blank = True, null = True)
 	creation_date = models.DateTimeField(auto_now_add = True,verbose_name = _('Creation Date'))
 	last_modified = models.DateTimeField(auto_now = True,verbose_name = _('Last Modified'))
 

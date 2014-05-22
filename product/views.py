@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from product.models import Product, Category,Collection
+from banner.models import Banner
 from django.http import Http404,HttpResponse
 
 def get_products(request):
@@ -12,6 +13,7 @@ def get_products_by_category(request,s):
 	category = ''
 	products = []
 	query_c = []
+	banners = []
 	try:
 		category = Category.objects.get(slug = slugs[-1])
 		for c in category.get_descendants(include_self=True):
@@ -21,8 +23,9 @@ def get_products_by_category(request,s):
 		raise Http404
 	if category:
 		products = Product.objects.filter(category__in = query_c)
+		banners = Banner.objects.filter(location = category)
 
-	return render_to_response('list.html',{'products':products,'category':category}, context_instance=RequestContext(request))
+	return render_to_response('list.html',{'products':products,'category':category,'banners':banners}, context_instance=RequestContext(request))
 
 
 def get_product_by_id(request,pid):

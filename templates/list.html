@@ -5,12 +5,11 @@
 {% load staticfiles %}
                 <div class="banner">
                     <ul>
+                        {% for b in banners %}
                         <li>
-                            <img src="{{ category.banner.url }}" class="img-responsive"/>
-                            <div class="i">
-                                <h3>{{ category.name }}</h3>
-                            </div>
+                            <img src="{{ b.image.url }}" class="img-responsive"/>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="items">
@@ -26,7 +25,7 @@
                         </div>
                         <div class="brief">
                         <p><a href="/product/{{ p.id }}/">{{ p.name }}</a></p>
-                        <p>
+                        <p><b>{{ p.short_description }}</b></p>
                         {% if p.is_discount %}
                         <span style="text-decoration:line-through;">¥{{ p.price }}</span>
                         <span>¥{{ p.get_real_price }}</span>

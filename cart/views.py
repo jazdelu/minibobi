@@ -54,6 +54,17 @@ def update(request):
 	return HttpResponseRedirect("/cart/")
 
 
-
+def delivery(request):
+	cart = ""
+	if request.GET:
+		try:
+			cart = Cart.objects.get(id = request.session.get("cart"))
+		except:
+			raise Http404
+		cart.delivery = request.GET['d']
+		cart.save()
+	else:
+		raise Http404
+	return HttpResponse(cart.total())
 
 

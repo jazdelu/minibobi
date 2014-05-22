@@ -12,7 +12,9 @@
                 <div class="col-md-5 col-xs-12 col-sm-12 cover">
                     <div class="hidden-xs">
                         <div class="col-md-12 col-xs-12 col-sm-12 cover">
+                            <a href="{{ product.get_cover.image.url }}">
                             <img src="{{ product.get_cover.thumb_big }}" class="img-responsive" style="float:left;">
+                            </a>
                         </div>
                         
                         <div class="col-md-12 col-xs-12 col-sm-12 thumbs" style="margin-top:5px;">
@@ -88,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12 col-sm-12 rec">
-                    <h4><label>{% trans "RECOMMEND PRODUCT" %}</label></h4>
+                    <p style="text-decoration:underline; font-size:1rem;margin-left:15px;">{% trans "RECOMMEND PRODUCT" %}</p>
                     {% for p in products %}
                     <div class="col-md-3 col-xs-6 col-sm-6">
                        <a href="/product/{{ p.id }}"><img src="{{ p.get_cover.thumb_middle }}" class="img-responsive"></a>

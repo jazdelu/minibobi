@@ -41,6 +41,7 @@ def order(request):
 		cart.status = 'off'
 		cart.save()
 		order.cart = cart
+		order.delivery = cart.delivery
 		del request.session['cart']
 		order.serial = serial_generator()
 		order.save()
@@ -49,7 +50,6 @@ def order(request):
 			p = i.product
 			p.stock-=i.quantity
 			p.save()
-
 		return render_to_response("thanks.html",{ "order":order }, context_instance=RequestContext(request))
 	else:
 		form = OrderForm()

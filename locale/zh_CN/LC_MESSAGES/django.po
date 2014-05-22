@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-12 23:02+0800\n"
+"POT-Creation-Date: 2014-05-17 18:42+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Banner"
 msgstr ""
 
-#: lookbook/models.py:6 order/models.py:15 page/models.py:5
+#: lookbook/models.py:6 order/models.py:19 page/models.py:5
 #: product/models.py:9 product/models.py:23 product/models.py:45
 #: product/models.py:61 product/models.py:90
 msgid "Name"
@@ -62,27 +62,27 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: order/admin.py:28 product/admin.py:66
+#: order/admin.py:22 product/admin.py:66
 msgid "Basic Information"
 msgstr ""
 
-#: order/admin.py:31
+#: order/admin.py:25
 msgid "Contact Information"
 msgstr "联系人信息"
 
-#: order/admin.py:34
+#: order/admin.py:28
 msgid "Receiver Information"
 msgstr "收件人信息"
 
-#: order/admin.py:38
+#: order/admin.py:32
 msgid "Order Detail"
 msgstr ""
 
-#: order/admin.py:50 order/models.py:42
+#: order/admin.py:44 order/models.py:45
 msgid "Creation Date"
 msgstr ""
 
-#: order/admin.py:68
+#: order/admin.py:62
 msgid "Item List"
 msgstr ""
 
@@ -106,23 +106,23 @@ msgstr ""
 msgid "Discard"
 msgstr ""
 
-#: order/models.py:16
+#: order/models.py:20
 msgid "Link"
 msgstr ""
 
-#: order/models.py:19 order/models.py:20
+#: order/models.py:23 order/models.py:24
 msgid "Express"
 msgstr ""
 
-#: order/models.py:29
+#: order/models.py:33
 msgid "Serial Number"
 msgstr ""
 
-#: order/models.py:43
+#: order/models.py:46
 msgid "Last Modified"
 msgstr ""
 
-#: order/models.py:46
+#: order/models.py:49
 msgid "Order"
 msgstr "Order"
 
@@ -414,23 +414,35 @@ msgstr "数量"
 msgid "AMOUNT"
 msgstr "合计"
 
-#: templates/cart.html:17 templates/cart.html.py:70
+#: templates/cart.html:17 templates/cart.html.py:79
 msgid "DELETE"
 msgstr "删除"
 
-#: templates/cart.html:21
+#: templates/cart.html:23 templates/cart.html.py:87
+msgid "Delivery Options"
+msgstr "物流选项"
+
+#: templates/cart.html:25 templates/cart.html.py:89
+msgid "Free Delivery"
+msgstr "免运费"
+
+#: templates/cart.html:26 templates/cart.html.py:90
+msgid "50RMB Rush Service"
+msgstr "50元加紧运送"
+
+#: templates/cart.html:29 templates/cart.html.py:94
 msgid "TOTAL"
 msgstr "总计"
 
-#: templates/cart.html:50 templates/cart.html.py:74
+#: templates/cart.html:59 templates/cart.html.py:83
 msgid "The cart is empty!"
 msgstr "购物车是空的"
 
-#: templates/cart.html:78 templates/product.html:72
+#: templates/cart.html:97 templates/product.html:72
 msgid "CONTINUE SHOPPING"
 msgstr "继续购物"
 
-#: templates/cart.html:79
+#: templates/cart.html:98
 msgid "CONFIRM ORDER"
 msgstr "确认订单"
 

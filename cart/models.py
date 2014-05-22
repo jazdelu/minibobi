@@ -5,10 +5,17 @@ STATUS_CHOICES = (
 		('on','on'),
 		('off','off'),
 )
+
+DELIVERY_CHOICES = (
+		('0','0'),
+		('50','50'),
+)
+
 class Cart(models.Model):
 
 	session= models.CharField(max_length = 128,blank = True)
-	status = models.CharField(max_length = 128,choices = STATUS_CHOICES,default = 'on')
+	status = models.CharField(max_length = 128,choices = STATUS_CHOICES)
+	delivery = models.CharField(max_length = 128,choices = DELIVERY_CHOICES,default="0")
 	creation_date = models.DateTimeField(auto_now_add  = True)
 	last_modified = models.DateTimeField(auto_now = True)
 
@@ -17,6 +24,8 @@ class Cart(models.Model):
 
 	def total(self):
 		total = 0
+		if self.delivery != '0':
+			total+=int(self.delivery)
 		for i in self.items.all():
 			total+=i.product.price*i.quantity
 		return total

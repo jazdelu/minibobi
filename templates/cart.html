@@ -18,7 +18,16 @@
                     </tr>
                     </thead>
                     <tfoot>
-                    <tr><td colspan = "7">{% trans "TOTAL" %}: ¥ {{ cart.total }} RMB</td></tr>
+                    <tr>
+                        <td colspan = "3" style="text-align:left;">
+                            {% trans "Delivery Options" %}:&nbsp;&nbsp;&nbsp;
+                            <select class="delivery">
+                                <option value="0">{% trans "Free Delivery" %}</option>
+                                <option value="50">{% trans "50RMB Rush Service" %}</option>
+                            </select>
+                        </td>
+                        <td colspan = "4">{% trans "TOTAL" %}: ¥ {{ cart.total }} RMB</td>
+                    </tr>
                     </tfoot>
                     <tbodt>
                     {% for i in cart.items.all %}
@@ -74,6 +83,16 @@
                     <label>{% trans "The cart is empty!" %}</label>
                     {% endfor %}
                 </div>
+                <div style="border-bottom:1px dashed #ccc;padding:10px 0px;" class="col-md-12 col-xs-12 col-sm-12 visible-xs">
+                    <span>{% trans "Delivery Options" %}:</span>
+                    <select class="delivery">
+                        <option value="0">{% trans "Free Delivery" %}</option>
+                        <option value="50">{% trans "50RMB Rush Service" %}</option>
+                    </select>
+                </div>
+                <div style="border-bottom:1px dashed #ccc;padding:10px 0px;" class="col-md-12 col-xs-12 col-sm-12 visible-xs">
+                <span>{% trans "TOTAL" %}: ¥ {{ cart.total }} RMB</span>
+                </div>
                 <div class="cart_btn col-md-12 col-xs-12 col-sm-12" style="margin-top:5px;">
                     <a href="/"><span>{% trans "CONTINUE SHOPPING" %}</span></a>
                     <a href= "/order/" class="reverse"><span>{% trans "CONFIRM ORDER" %}</span></a>
@@ -86,6 +105,17 @@
 <script>
 $(".form_control[name='quantity']").change(function(){
     window.location.href="/cart/update/?iid="+$(this).attr("value_data")+"&quantity="+$(this).val();
+});
+
+var o = {{ cart.delivery }}
+$('.delivery').attr('value',o);
+
+$(".delivery").change(function(){
+    var v = $(this).val()
+    $.get("/cart/delivery/", { d: v }, 
+    function(data){
+        window.location.reload();
+    });
 });
 </script>
 {% endblock %}

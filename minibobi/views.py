@@ -9,7 +9,7 @@ from page.models import Page
 
 def home(request):
 	products = Product.objects.all()
-	banners = Banner.objects.filter(location = 'homepage')
+	banners = Banner.objects.exclude(location__isnull=False)
 	return render_to_response("index.html",{"products":products,"banners":banners},context_instance = RequestContext(request))
 
 def about(request):
@@ -23,7 +23,7 @@ def about(request):
 
 
 
-def set_language(request):
+def lang(request):
 	if request.GET:
 		translation.activate('zh')
 		response = HttpResponseRedirect('/')

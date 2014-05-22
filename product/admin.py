@@ -18,7 +18,7 @@ class CollectionAdmin(admin.ModelAdmin):
 
 admin.site.register(Collection,CollectionAdmin)
 
-class ColorAdmin(admin.ModelAdmin):
+class ColorAdmin(TranslationAdmin):
 	list_display = ('name','color')
 	fields = ('name','color')
 	form = ColorAdminForm
@@ -47,8 +47,8 @@ admin.site.register(Size)
 class CategoryAdmin(MPTTModelAdmin):
 	mptt_level_indent = 20
 	search_fields = ('name','slug')
-	list_display = ('name','slug','banner')
-	fields=('name','slug','banner','collection','parent')
+	list_display = ('name','slug',)
+	fields=('name','slug','collection','parent')
 	list_display_links = ('name',)
 	prepopulated_fields = {'slug': ('name',)}
 

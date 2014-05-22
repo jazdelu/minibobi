@@ -10,3 +10,5 @@ translator.register(Product,ProductTranslationOptions)
 class ColorTranslationOptions(TranslationOptions):
 	fields = ('name',)
 	required_languages = ('en','zh-cn')
+
+translator.register(Color,ColorTranslationOptions)

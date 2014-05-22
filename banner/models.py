@@ -1,13 +1,13 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mptt.models import MPTTModel, TreeForeignKey
+from product.models import Category
 # Create your models here.
-LOCATION_CHOICES=(
-		('homepage',_('Homepage')),
-)
+
 
 class Banner(models.Model):
 	image = models.ImageField(upload_to = 'banner/',verbose_name = _('Image'))
-	location = models.CharField(max_length = 128, choices = LOCATION_CHOICES, default = 'homepage')
+	location = TreeForeignKey(Category,blank = True, null = True, help_text="Leave blank for the homepage banners")
 	weight = models.IntegerField(verbose_name = _('Weight'),help_text = _('Matters the order of banners'))
 
 	class Meta:

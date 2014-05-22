@@ -5,12 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.forms import *
 from suit.widgets import AutosizedTextarea
 # Register your models here.
-class ExpressAdmin(admin.ModelAdmin):
-	list_display = ('name','link')
-	fields = ('name','link')
-
-admin.site.register(Express,ExpressAdmin)
-
 
 class OrderAdminForm(ModelForm):
 	class Media:
@@ -26,7 +20,7 @@ class OrderAdmin(admin.ModelAdmin):
 	list_display = ('serial','c_name','c_phone','r_name','r_phone','status','creation_date_format')
 	fieldsets = (
 		(_('Basic Information'), {
-			'fields':('serial','status','express','enum',)
+			'fields':('serial','status','delivery',)
 		}),
 		(_('Contact Information'),{
 			'fields':('c_name','c_phone','c_email')

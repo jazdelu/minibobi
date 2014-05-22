@@ -13,6 +13,7 @@
     <div>New Order For Minibobi：</div><br/>
     <p>Order Serial: {{ order.serial }} </p>
     <p>Creation Date: {{ order.creation_date|date:"Y-m-j H:i:s" }}</p>
+    <p>Delivery Option: {{ order.get_delivery_display }}</p>
     <table style="width:800px;margin-bottom:20px;border:1px solid #ccc;">
         <caption>Order Detail</caption>
         <thead  style="background-color:#eee">
