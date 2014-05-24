@@ -5,6 +5,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 class Lookbook(models.Model):
 	name = models.CharField(max_length = 128,verbose_name = _('Name'))
 	description = models.TextField(blank = True, null = True,verbose_name = _('Description'))
+	is_active = models.BooleanField(verbose_name = 'Publish this lookbook?',default = False)
 
 	class Meta:
 		verbose_name = _('Lookbook')
@@ -12,6 +13,16 @@ class Lookbook(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+	def save(self,*args, **kwargs):
+		if self.is_active:
+			try:
+				l = Lookbook.objects.get(is_active = True)
+				l.is_active = False
+				l.save()
+			except:
+				pass
+		super(Lookbook, self).save(*args, **kwargs)
 
 class Image(models.Model):
 

@@ -99,6 +99,10 @@ a.active{
 .top ul>li>a{
 	padding: 2px 5px
 }
+.top .sns{
+	line-height: 26px;
+	color:#333;
+}
 .language-form{
 	display: inline-block;
 }

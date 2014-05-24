@@ -6,7 +6,7 @@
 {% block css %}
     <link href="/static/minibobi/css/jquery.ui.core.min.css" rel="stylesheet">
 {% endblock %}
-{% block title %}{{ product.page_title }}{% endblock %}
+{% block title %}{{ product.name|upper }}{% endblock %}
 {% load i18n %}
 {% block main %}
                 <div class="col-md-5 col-xs-12 col-sm-12 cover">
@@ -85,7 +85,7 @@
                             {{ product.long_description|linebreaksbr }}
                         </div>
                         <div id="tab2" class="tab-content">
-                            sdafsadfdsafhifadslkfhafl
+                            {% trans "No Messages" %}
                         </div>
                     </div>
                 </div>

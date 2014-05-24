@@ -7,12 +7,14 @@
 　　<!--[if lt IE 9]>
 　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 　　<![endif]-->
-    <meta name="description" content="{% block description_meta %}MINIBOBI,BABY CLOTHING, FAT BABY CLOTHING,{% endblock %}">
-    <meta name="keywords" content = "{% block keywords_meta %}BABY CLOTHING, FAT BABY CLOTHING{% endblock %}">
+    <meta name="description" content="{% block description_meta %}Mini Bobi, French & Comfortable Clothing For Kids{% endblock %}">
+    <meta name="keywords" content = "{% block keywords_meta %}Mini Bobi,French,Comfortable Clothing For Kids{% endblock %}">
     <meta name="author" content="Minibobi">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-
+    <link href="/static/fontello/fontello.css" rel="stylesheet" type="text/css">
+    <link href="/static/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/tooltipster/css/tooltipster.css" />
     <link href="/static/minibobi/css/minibobi.css" rel="stylesheet" type="text/css">
     {% block css %}
     {% endblock %}
@@ -40,7 +42,19 @@
                 {% load i18n %}
                     <li><a><span>{% trans "CALL US AT" %} 131231</span></a></li>
                     <li><a><span>|</span></a></li>
-                    <li><a href="/cart/"><span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a></li>
+                    <li><a href="/cart/">
+                    <span class="icon-shopping-cart"></span>
+                    <span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a>
+                    </li>
+                    <li><a><span>|</span></a></li>
+                    <li><a href="#"><span class="sns icon-barcode"></span></a></li>
+                    <li>&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="#"><span class="sns icon-social-weibo"></span></a></li>
+                    <li>&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="#"><span class="sns icon-social-twitter"></span></a></li>
+                    <li>&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="#"><span class="sns icon-social-facebook"></span></a></li>
+                    <li>&nbsp;&nbsp;&nbsp;</li>
                     <li><a><span>|</span></a></li>
                 </ul>
             </div>
@@ -151,6 +165,7 @@
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script src="/static/minibobi/js/jquery.pin.min.js"></script>
 <script type="text/javascript" src="/static/minibobi/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="/static/tooltipster/js/jquery.tooltipster.min.js"></script>
 <script type="text/javascript">
     $(".side-nav").pin({
         containerSelector:".wrap"
@@ -183,6 +198,13 @@
         var menu = $(".main-nav>li>a[href='"+url+"']");
         menu.addClass("active");
     });
+</script>
+<script>
+        $(document).ready(function() {
+            $('.icon-barcode').tooltipster({
+                content: $('<strong>Here is the barcode!</strong>')
+            });
+        });
 </script>
 {% block js %}
 {% endblock %}
