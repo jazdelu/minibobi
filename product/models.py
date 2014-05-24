@@ -131,7 +131,8 @@ class Product(models.Model):
 
 	def get_real_price(self):
 		p = self.price
-		p = self.price *(1-self.discount.discount/100.0)
+		if self.is_discount():
+			p = self.price *(1-self.discount.discount/100.0)
 		return p
 
 

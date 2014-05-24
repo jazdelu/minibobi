@@ -51,7 +51,7 @@ def get_products_by_collection(request,cid):
 	return render_to_response('list.html',{'products':product},context_instance = RequestContext(request))
 
 def get_sales(request):
-	products = Product.objects.exclude(discount = None)
-	return render_to_response('list.html',{'products':product},context_instance = RequestContext(request))
+	products = Product.objects.exclude(discount__isnull = True)
+	return render_to_response('list.html',{'products':products},context_instance = RequestContext(request))
 
 

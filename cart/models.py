@@ -27,7 +27,7 @@ class Cart(models.Model):
 		if self.delivery != '0':
 			total+=int(self.delivery)
 		for i in self.items.all():
-			total+=i.product.price*i.quantity
+			total+=i.product.get_real_price()*i.quantity
 		return total
 
 
@@ -40,7 +40,7 @@ class CartItem(models.Model):
 	quantity = models.IntegerField()
 
 	def get_price(self):
-		return self.product.price * self.quantity
+		return self.product.get_real_price() * self.quantity
 
 	def is_same_spec(self,i):
 		if self.color == i.color and self.size ==i.size :

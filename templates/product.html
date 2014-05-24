@@ -39,7 +39,8 @@
                     <div class="title col-md-12 col-xs-12 col-sm-12">
                         <p class="name">{{ product.name|upper }}</p>
                         <p class="desc">{{ product.short_description }}</p>
-                        <p class="price">¥{{ product.price }}</p>
+                        <p class="price">¥{{ product.get_real_price }}</p>
+
                     </div>
                     <ul class="link col-md-12 col-xs-12 col-sm-12">
                         <li><a href="#">{% trans "COMPOSITION" %}</a></li>
