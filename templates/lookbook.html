@@ -4,14 +4,13 @@
                 <div class="col-md-12 col-sm-12 col-xs-12 lookbook">
                     <div class="title">
                         <h3>LOOKBOOK</h3>
-                        <h4>SPRING/SUMMER 2014</h4>
+                        <h4>{{ lookbook.name }}</h4>
                     </div>
                 </div>
-                {% for l in lookbooks %}
-                {% for i in l.images.all %}
+                {% for i in lookbook.images.all %}
                 <div class="col-md-12 col-sm-12 col-xs-12 lookbook">
                     <img src="{{ i.image.url }}" class="img-responsive" style="margin:0 auto;">
                 </div>
                 {% endfor %}
-                {% endfor %}
+
 {% endblock %}
