@@ -76,7 +76,7 @@
                         <div class="col-md-12 col-xs-12 col-sm-12 cart_btn" style="padding:0px; margin-top:10px;">
                         <span class="quantity col-xs-12" style='padding:0px;width:100px;display:block;'><input type="text" value = "{{ i.quantity }}" name = "quantity" class="form_control" id="id_quantity" value_data={{ i.id }} style="text-align:center;"></span>   
                         <br/><br/><br/>
-                        <a href="/cart/delete/{{ i.id }}" class="col-xs-7 reverse" style="width:100px;padding:3px 5px;display:inline-block"><span style="padding:2px 5px;">{% trans "DELETE" %}</span></a>
+                        <a href="/cart/delete/{{ i.id }}" class="col-xs-7 reverse" style="width:100px;padding:3px 5px;display:block"><span style="padding:2px 5px;">{% trans "DELETE" %}</span></a>
                         </div>
                     </div>
                     {% empty %}
