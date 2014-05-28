@@ -675,6 +675,15 @@ td tr{
     .cart_btn a>span{
     	width: 100%;
     }
+    .list_btn a{
+    	display: block;
+    	float: left;
+    	margin-bottom: 10px;
+    	width: 120px;
+    }
+    .list_btn a>span{
+    	line-height: 16px;
+    }
 
     .cart_btn a.reverse{
     	display: inline-block;
