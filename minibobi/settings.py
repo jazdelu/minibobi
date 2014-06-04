@@ -162,6 +162,7 @@ SUIT_CONFIG = {
         {'app':'page','label':u'Page','icon':'icon-bookmark'},
         {'app':'product','label':u'Product','icon':'icon-shopping-cart'},
         {'app':'order','label':u'Order','icon':'icon-time'},
+        {'label': 'Homepage', 'icon':'icon-leaf', 'url': '/'},
     ),
     # 'SEARCH_URL': '/admin/auth/user/',
 

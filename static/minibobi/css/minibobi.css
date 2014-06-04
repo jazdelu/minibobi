@@ -301,9 +301,10 @@ aside{
 .item{
 	padding-top: 10px;
 	padding-left: 0px;
-	padding-right: 0px;
+	padding-right: 10px;
 	color:#9e9e9e;
 	float:left;
+	text-align: center;
 }
 .item .cover{
 	padding:0 10px;
@@ -318,9 +319,11 @@ aside{
 .item .brief{
 	min-height: 60px;
 }
-.item .brief p{
+.item .brief>p{
 	font-size: 1rem;
+	text-align: center;
 }
+
 .cart_btn{
 	overflow: hidden;
 	text-align: center;
@@ -370,6 +373,10 @@ aside{
 	padding: 3px 5px;
 	color:#fcc4ac;
 	width: auto;
+}
+.list_btn>a{
+	float: none;
+	margin: 0 auto;
 }
 
 
@@ -647,7 +654,14 @@ td tr{
 	float: none;
 	margin: 0 auto;
 }
-
+/*--------------contact-------------------*/
+.contact{
+	float: none;
+	margin: 0 auto;
+}
+.contact>.form-horizontal>.form-group{
+	margin-left: 0px;
+}
 
 /*-----------queries------------*/
 @media screen and (max-width:768px){
