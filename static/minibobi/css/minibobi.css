@@ -317,11 +317,14 @@ aside{
 	margin: 0 auto;
 }
 .item .brief{
-	min-height: 60px;
+	height: 120px;
 }
 .item .brief>p{
-	font-size: 1rem;
+	font-size: 0.875rem;
 	text-align: center;
+}
+.item .brief>p>a{
+	font-size: 1rem;
 }
 
 .cart_btn{
