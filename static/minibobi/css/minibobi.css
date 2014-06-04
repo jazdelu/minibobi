@@ -694,7 +694,8 @@ td tr{
     }
     .list_btn a{
     	display: block;
-    	float: left;
+    	float: none;
+    	margin: 0 auto;
     	margin-bottom: 10px;
     	width: 120px;
     }
