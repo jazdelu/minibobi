@@ -320,10 +320,12 @@ aside{
 	height: 120px;
 }
 .item .brief>p{
+	font-size: 14px;
 	font-size: 0.875rem;
 	text-align: center;
 }
 .item .brief>p>a{
+	font-size: 16px;
 	font-size: 1rem;
 }
 
