@@ -317,7 +317,7 @@ aside{
 	margin: 0 auto;
 }
 .item .brief{
-	height: 120px;
+	min-height: 120px;
 }
 .item .brief>p{
 	font-size: 14px;
