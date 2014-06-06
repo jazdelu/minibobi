@@ -8,10 +8,12 @@
         $(".product .size ul li span").removeAttr("class","select");
         $(this).addClass("select");
     });
-    $(".thumbs div img").mouseover(function(){
+
+    $(".thumb").mouseover(function(){
         var url = $(this).attr("src").split("-middle")[0];
-        url+="-big"
-        $(".cover>img").attr("src",url);
+        $(".cover>a").attr("href",url);
+        url+="-big";
+        $(".cover>a>img").attr("src",url);
     });
 
     $(".cart_btn a").click(function(){
