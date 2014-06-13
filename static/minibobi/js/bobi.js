@@ -6,7 +6,6 @@
     $("#tab").tabs();
     $(".product .size ul li span.active").click(function(){
         var stock = parseInt($(this).attr("stock"));
-        alert(stock);
         $(".product .size ul li span.active").removeClass("select");
         $(this).addClass("select");
     });
