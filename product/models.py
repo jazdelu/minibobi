@@ -32,6 +32,8 @@ class Color(models.Model):
 
 class Size(models.Model):
 	size = models.CharField(max_length = 128, verbose_name = _('Size'))
+	stock = models.IntegerField(verbose_name = "Stock")
+	product = models.ForeignKey('Product',blank = True, null = True,related_name = 'sizes')
 
 	class Meta:
 		verbose_name = _('Size')
@@ -94,7 +96,6 @@ class Product(models.Model):
 	price = models.FloatField(verbose_name = _('Price'))
 	stock = models.IntegerField(verbose_name = _('Stock'))
 	color = models.ForeignKey(Color,related_name='products')
-	size = models.ManyToManyField(Size,related_name = 'products')
 	discount= models.ForeignKey(Discount,blank= True, null = True)
 	is_recommend = models.BooleanField(verbose_name = 'Add this product to Recommend Product')
 	long_description = models.TextField(blank = True,verbose_name = _('Long Description'))

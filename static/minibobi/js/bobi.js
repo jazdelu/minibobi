@@ -4,9 +4,9 @@
         initval: 1
     });
     $("#tab").tabs();
-    $(".size-span").click(function(){
-        $(".product .size ul li span").removeAttr("class","select");
-        $(this).addClass("select");
+    $(".product .size ul li span.active").click(function(){
+        $(".product .size ul li span.active").removeClass("select");
+        $(this).addClass("select")
     });
 
     $(".thumb").mouseover(function(){

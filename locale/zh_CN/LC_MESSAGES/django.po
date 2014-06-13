@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-04 16:25+0800\n"
+"POT-Creation-Date: 2014-06-13 16:14+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: banner/models.py:9 lookbook/models.py:29 lookbook/models.py:32
-#: lookbook/models.py:33 product/models.py:154 product/models.py:157
-#: product/models.py:158
+#: lookbook/models.py:33 product/models.py:155 product/models.py:158
+#: product/models.py:159
 msgid "Image"
 msgstr ""
 
@@ -37,8 +37,8 @@ msgid "Banner"
 msgstr ""
 
 #: lookbook/models.py:6 order/models.py:19 page/models.py:5
-#: product/models.py:9 product/models.py:23 product/models.py:45
-#: product/models.py:61 product/models.py:89
+#: product/models.py:9 product/models.py:23 product/models.py:47
+#: product/models.py:63 product/models.py:91
 msgid "Name"
 msgstr ""
 
@@ -58,7 +58,7 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: order/admin.py:22 product/admin.py:66
+#: order/admin.py:22 product/admin.py:69
 msgid "Basic Information"
 msgstr ""
 
@@ -130,35 +130,35 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: product/admin.py:17 product/admin.py:92 product/models.py:12
+#: product/admin.py:17 product/admin.py:94 product/models.py:12
 msgid "Publish Date"
 msgstr ""
 
-#: product/admin.py:35 product/models.py:48
+#: product/admin.py:35 product/models.py:50
 msgid "Start Time"
 msgstr ""
 
-#: product/admin.py:40 product/models.py:49
+#: product/admin.py:40 product/models.py:51
 msgid "End Time"
 msgstr ""
 
-#: product/admin.py:69
+#: product/admin.py:72
 msgid "Price Information"
 msgstr ""
 
-#: product/admin.py:72
+#: product/admin.py:75
 msgid "Category Information"
 msgstr ""
 
-#: product/admin.py:76
+#: product/admin.py:79
 msgid "Spec Information"
 msgstr ""
 
-#: product/admin.py:79
+#: product/admin.py:82
 msgid "SEO"
 msgstr ""
 
-#: product/models.py:10 product/models.py:62
+#: product/models.py:10 product/models.py:64
 msgid "Slug"
 msgstr ""
 
@@ -170,7 +170,7 @@ msgstr ""
 msgid "Last Modified Date"
 msgstr ""
 
-#: product/models.py:16 product/models.py:17 product/models.py:64
+#: product/models.py:16 product/models.py:17 product/models.py:66
 msgid "Collection"
 msgstr ""
 
@@ -178,140 +178,140 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: product/models.py:34 product/models.py:37 product/models.py:38
+#: product/models.py:34 product/models.py:39 product/models.py:40
 msgid "Size"
 msgstr ""
 
-#: product/models.py:46 product/models.py:52
+#: product/models.py:48 product/models.py:54
 msgid "Discount"
 msgstr ""
 
-#: product/models.py:47
+#: product/models.py:49
 msgid "Icon"
 msgstr ""
 
-#: product/models.py:62
+#: product/models.py:64
 msgid "Displayed in the URL,should be unique."
 msgstr ""
 
-#: product/models.py:63
+#: product/models.py:65
 msgid "Parent"
 msgstr ""
 
-#: product/models.py:67 product/models.py:68
+#: product/models.py:69 product/models.py:70
 msgid "Category"
 msgstr ""
 
-#: product/models.py:90
+#: product/models.py:92
 msgid "Serial"
 msgstr ""
 
-#: product/models.py:91
+#: product/models.py:93
 msgid "Short Description"
 msgstr ""
 
-#: product/models.py:94
+#: product/models.py:96
 msgid "Price"
 msgstr ""
 
-#: product/models.py:95
+#: product/models.py:97
 msgid "Stock"
 msgstr ""
 
-#: product/models.py:100
+#: product/models.py:101
 msgid "Long Description"
 msgstr ""
 
-#: product/models.py:101
+#: product/models.py:102
 msgid "Page Title"
 msgstr ""
 
-#: product/models.py:101
+#: product/models.py:102
 msgid "Overwrites what is displayed at the top of your browser or in bookmarks"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:103
 msgid "Description Meta Tag"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:103
 msgid "A description of the page sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:104
 msgid "Keywords Meta Tag"
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:104
 msgid "A list of comma separated keywords sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:108 product/models.py:109
+#: product/models.py:109 product/models.py:110
 msgid "Product"
 msgstr ""
 
-#: product/models.py:155
+#: product/models.py:156
 msgid "Set this image to product cover?"
 msgstr ""
 
-#: templates/about.html:6 templates/base.html:109 templates/base.html.py:132
+#: templates/about.html:6 templates/base.html:102 templates/base.html.py:125
 msgid "ABOUT"
 msgstr "关于我们"
 
-#: templates/base-list.html:9 templates/base.html:86
-#: templates/base.html.py:130
+#: templates/base-list.html:9 templates/base.html:79
+#: templates/base.html.py:123
 msgid "GIRLS"
 msgstr "女装"
 
-#: templates/base-list.html:11 templates/base.html:88
+#: templates/base-list.html:11 templates/base.html:81
 msgid "TOP"
 msgstr "上衣"
 
-#: templates/base-list.html:12 templates/base.html:89
+#: templates/base-list.html:12 templates/base.html:82
 msgid "DRESS"
 msgstr "洋装"
 
-#: templates/base-list.html:13 templates/base.html:90
+#: templates/base-list.html:13 templates/base.html:83
 msgid "SKIRT"
 msgstr "裙子"
 
 #: templates/base-list.html:14 templates/base-list.html.py:25
-#: templates/base.html:91 templates/base.html.py:102
+#: templates/base.html:84 templates/base.html.py:95
 msgid "PANTS"
 msgstr "裤子"
 
 #: templates/base-list.html:15 templates/base-list.html.py:26
-#: templates/base.html:92 templates/base.html.py:103
+#: templates/base.html:85 templates/base.html.py:96
 msgid "CARDIGAN"
 msgstr "针织衫"
 
 #: templates/base-list.html:16 templates/base-list.html.py:27
-#: templates/base-list.html:33 templates/base.html:93
-#: templates/base.html.py:104
+#: templates/base-list.html:33 templates/base.html:86
+#: templates/base.html.py:97
 msgid "ACCESSORIES"
 msgstr "配件"
 
 #: templates/base-list.html:17 templates/base-list.html.py:28
-#: templates/base-list.html:31 templates/base.html:94
-#: templates/base.html.py:105 templates/base.html:108
-#: templates/base.html.py:131
+#: templates/base-list.html:31 templates/base.html:87
+#: templates/base.html.py:98 templates/base.html:101
+#: templates/base.html.py:124
 msgid "LOOKBOOK"
 msgstr "搭配推荐"
 
-#: templates/base-list.html:20 templates/base.html:97
-#: templates/base.html.py:129
+#: templates/base-list.html:20 templates/base.html:90
+#: templates/base.html.py:122
 msgid "BOYS"
 msgstr "男装"
 
-#: templates/base-list.html:22 templates/base.html:99
+#: templates/base-list.html:22 templates/base.html:92
 msgid "TSHIRT"
 msgstr "T恤"
 
-#: templates/base-list.html:23 templates/base.html:100
+#: templates/base-list.html:23 templates/base.html:93
 msgid "POLO"
 msgstr "POLO衫"
 
-#: templates/base-list.html:24 templates/base.html:101
+#: templates/base-list.html:24 templates/base.html:94
 msgid "SHIRT"
 msgstr "衬衫"
 
@@ -319,63 +319,63 @@ msgstr "衬衫"
 msgid "SALES"
 msgstr "限时特价"
 
-#: templates/base.html:52
+#: templates/base.html:45
 msgid "CALL US AT"
 msgstr "拨打电话"
 
-#: templates/base.html:110 templates/base.html.py:133
+#: templates/base.html:103 templates/base.html.py:126
 msgid "CONTACT"
 msgstr "联系我们"
 
-#: templates/base.html:111 templates/base.html.py:134
+#: templates/base.html:104 templates/base.html.py:127
 msgid "BLOG"
 msgstr "部落格"
 
-#: templates/base.html:150
+#: templates/base.html:143
 msgid "About"
 msgstr "关于我们"
 
-#: templates/base.html:151
+#: templates/base.html:144
 msgid "Contact"
 msgstr "联系我们"
 
-#: templates/base.html:152
+#: templates/base.html:145
 msgid "Blog"
 msgstr "部落格"
 
-#: templates/base.html:153
+#: templates/base.html:146
 msgid "Press review"
 msgstr "媒体报导"
 
-#: templates/base.html:154
+#: templates/base.html:147
 msgid "Stockists"
 msgstr "存货区"
 
-#: templates/base.html:158
+#: templates/base.html:151
 msgid "Payment"
 msgstr "付款方式"
 
-#: templates/base.html:159
+#: templates/base.html:152
 msgid "Shipping"
 msgstr "运费"
 
-#: templates/base.html:160
+#: templates/base.html:153
 msgid "Return"
 msgstr "退换货服务"
 
-#: templates/base.html:161
+#: templates/base.html:154
 msgid "General terms and conditions of sales"
 msgstr "条款与细则"
 
-#: templates/base.html:164 templates/product.html:50
+#: templates/base.html:157 templates/product.html:50
 msgid "SIZE GUIDE"
 msgstr "尺码量表"
 
-#: templates/base.html:165
+#: templates/base.html:158
 msgid "NEWSLETTER SUBSCRIPTION"
 msgstr "订阅我们"
 
-#: templates/base.html:166
+#: templates/base.html:159
 msgid "Receive our news and customized offers by subscribing to our newsletter"
 msgstr "订阅我们最新的消息以及促销活动"
 
@@ -399,7 +399,7 @@ msgstr "颜色"
 msgid "SIZE"
 msgstr "尺寸"
 
-#: templates/cart.html:15 templates/product.html:70
+#: templates/cart.html:15 templates/product.html:74
 msgid "QUANTITY"
 msgstr "数量"
 
@@ -431,7 +431,7 @@ msgstr "总计"
 msgid "The cart is empty!"
 msgstr "购物车是空的"
 
-#: templates/cart.html:97 templates/product.html:75
+#: templates/cart.html:97 templates/product.html:79
 msgid "CONTINUE SHOPPING"
 msgstr "继续购物"
 
@@ -535,29 +535,28 @@ msgstr "材质"
 msgid "SHIPPING"
 msgstr "运费"
 
-#: templates/product.html:66
+#: templates/product.html:70
 msgid "Please choose the size you want"
 msgstr "请选择您想要的尺寸"
 
-#: templates/product.html:74
+#: templates/product.html:78
 msgid "ADD TO CART"
 msgstr "添加至购物车"
 
-#: templates/product.html:81
+#: templates/product.html:85
 msgid "DETAILS"
 msgstr "详细信息"
 
-#: templates/product.html:83
+#: templates/product.html:87
 msgid "RETURNS"
 msgstr "退换货"
 
-#: templates/product.html:89
+#: templates/product.html:93
 msgid "No Messages"
 msgstr "暂无信息"
 
-#: templates/product.html:94
-#, fuzzy
-msgid "RECOMMEND PRODUCT"
+#: templates/product.html:98
+msgid "RECOMMENDED PRODUCT"
 msgstr "推荐产品"
 
 #~ msgid "E-mail"

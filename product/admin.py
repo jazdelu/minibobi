@@ -59,12 +59,15 @@ class ImageInline(admin.TabularInline):
 	model = Image
 	extra = 1
 
+class SizeInline(admin.TabularInline):
+	model = Size
+	extra = 1
 
 class ProductAdmin(TranslationAdmin):
 	list_display = ('name','short_description','collection','category','discount','pub_date_format')
 	fieldsets = (
 		(_('Basic Information'), {
-			'fields':('serial','stock','name','short_description','long_description','is_recommend')
+			'fields':('serial','name','short_description','long_description','is_recommend')
 		}),
 		(_('Price Information'),{
 			'fields':('price','discount')
@@ -74,7 +77,7 @@ class ProductAdmin(TranslationAdmin):
 			'fields':('category',),
 		}),
 		(_('Spec Information'),{
-			'fields':('color','size')
+			'fields':('color',)
 		}),
 		(_('SEO'),{
 			'classes': ('collapse',),
@@ -82,9 +85,8 @@ class ProductAdmin(TranslationAdmin):
 		}),
 	)
 	form = ProductAdminForm
-	filter_horizontal = ('size',)
 
-	inlines = (ImageInline,)
+	inlines = (SizeInline,ImageInline)
 
 	def pub_date_format(self,obj):
 		return obj.pub_date.strftime("%Y-%m-%d %H:%M:%S")

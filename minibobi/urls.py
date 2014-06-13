@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     url(r'^cart/',include('cart.urls')),
     url(r'^order/',include('order.urls')),
     url(r'^contact/','minibobi.views.contact',name='contact'),
-    #url(r'^lang/$', 'minibobi.views.set_language',name="set language"),
+    url(r'^setlang/$', 'minibobi.views.set_language',name="set language"),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 )+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
