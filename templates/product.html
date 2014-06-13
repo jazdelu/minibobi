@@ -60,9 +60,9 @@
                         <ul class="options">
                             {% for s in product.sizes.all %}
                                 {% if s.stock != 0 %}
-                                <li option_value = "{{ s.id }}"><span class="active">{{ s.size }}</span></li>
+                                <li option_value = "{{ s.id }}"><span class="active" stock = "{{ s.stock }}">{{ s.size }}</span></li>
                                 {% else %}
-                                <li option_value = "{{ s.id }}"><span class="inactive">{{ s.size }}</span></li>
+                                <li option_value = "{{ s.id }}"><span class="inactive" stock = "{{ s.stock }}">{{ s.size }}</span></li>
                                 {% endif %}
                             {% endfor %}
                         </ul>

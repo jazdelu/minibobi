@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 from django.db.models import Q
 from order.models import Order
 from order.forms import OrderForm
+from product.models import Size
 from cart.models import Cart
 import datetime,random
 from django.core.mail import EmailMultiAlternatives
@@ -47,9 +48,8 @@ def order(request):
 		order.save()
 		send_mail(order,request)
 		for i in cart.items.all():
-			p = i.product
-			p.stock-=i.quantity
-			p.save()
+			i.size.stock-=i.quantity
+			i.size.save()
 		return render_to_response("thanks.html",{ "order":order }, context_instance=RequestContext(request))
 	else:
 		form = OrderForm()
