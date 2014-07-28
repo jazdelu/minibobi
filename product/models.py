@@ -102,7 +102,7 @@ class Product(models.Model):
 	page_title = models.CharField(max_length=128,blank = True,verbose_name = _('Page Title'),help_text = _('Overwrites what is displayed at the top of your browser or in bookmarks'))
 	description_meta = models.TextField(blank = True,verbose_name = _('Description Meta Tag'),help_text = _('A description of the page sometimes used by search engines.'))
 	keywords_meta = models.TextField(blank = True,verbose_name = _('Keywords Meta Tag'),help_text = _('A list of comma separated keywords sometimes used by search engines.'))
-	pub_date = models.DateTimeField(auto_now_add = True)
+	pub_date = models.DateTimeField(verbose_name = "Publish Date")
 	last_modified = models.DateTimeField(auto_now = True)
 
 	class Meta:

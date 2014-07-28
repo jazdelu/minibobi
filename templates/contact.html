@@ -4,28 +4,38 @@
 
 {% block main %}
                 {% load i18n %}
-                <div class="col-md-4 col-xs-12 col-sm-12 contact">
+                <div class="col-md-12 col-xs-12 col-sm-12 contact">
                     <h3>{% trans "CONTACT US" %}</h3>
-                   <form role="form" id='form' action='/contact/' method='post' class="form-horizontal">
+                  <div class="banner" style="margin-bottom:20px;">
+                      <ul>
+                          <li>
+                              <img src="/static/minibobi/images/contact.jpg" class="img-responsive"/>
+                              <div class="text">
+                                <h4>MINI BOBI</h4>
+                                <h4>PARIS</h4>
+                                <br/>
+                                <h6>info@minibobi.com</h6>
+                                <h6>(+86)183-1710-0032</h6>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                   <form role="form" id='form' action='/contact/' method='post' class="form-horizontal col-md-6 col-xs-12 col-sm-12">
                      {% csrf_token %} 
                       <div class="form-group">
-                        <label for="id_name">{% trans "Contact Name" %}</label>
-                        <input type="text" class="form-control" id="id_name" name='name' placeholder="Enter your name">
+                        <input type="text" class="form-control" id="id_name" name='name' placeholder="{% trans "Contact Name" %}">
                       </div>
                       <div class="form-group">
-                        <label for="id_email">{% trans "Contact E-mail" %}</label>
-                        <input type="text" class="form-control" id="id_email" name = 'email' placeholder="Enter you contact E-mail">
+                        <input type="text" class="form-control" id="id_email" name = 'email' placeholder="{% trans "Contact E-mail" %}">
                       </div>
                       <div class="form-group">
-                        <label for="id_subject">{% trans "Subject" %}</label>
-                        <input type="text" class="form-control" id="id_tel" name = 'subject' placeholder="Enter the subject">
+                        <input type="text" class="form-control" id="id_tel" name = 'subject' placeholder="{% trans "Subject" %}">
                       </div>
                       <div class="form-group">
-                        <label for="id_content">{% trans "Content" %}</label>
-                        <textarea class="form-control" id = 'id_content' name = 'content' rows="3"></textarea>
+                        <textarea class="form-control" id = 'id_content' name = 'content' rows="6" placeholder="{% trans "Content" %}"></textarea>
                       </div>
-	                    <div class="cart_btn">
-	                    	<a href= "javascript:void(0)" class="submit"><span>{% trans "Submit" %}</span></a>
+	                    <div class="contact_btn" style="float:right;">
+	                    	<a href= "javascript:void(0)" class="submit">{% trans "Submit" %}</a>
 	                    </div>
                     </form>
                 </div>

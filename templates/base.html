@@ -25,6 +25,23 @@
     <link href="/static/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/static/tooltipster/css/tooltipster.css" />
     <link href="/static/minibobi/css/minibobi.css" rel="stylesheet" type="text/css">
+
+<!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup{background:transparent; clear:left; font:14px Helvetica,Arial,sans-serif;padding: 0px; }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        #mc_embed_signup>form{
+            padding: 5px 0px;
+        }
+        #mc_embed_signup>form>input.email{
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+    </style>
+<!--End mc_embed_signup-->
     {% block css %}
     {% endblock %}
     <title>{% block title %}{% endblock %}</title>
@@ -108,11 +125,11 @@
                 <a href="/"><img src = "/static/minibobi/images/logo-1.jpg" class="img-responsive"></a>
                 </div>
                 <div class="col-md-5 col-sm-5 search hidden-xs">
-                <form class="form-inline" role = "form">
+                <form class="form-inline" role = "form" action = '/product/' method='get'>
                 <div class="form-group">
-                    <input type="text" name="search" class="input-medium search-query" placeholder="search" />
+                    <input type="text" name="s" class="input-medium search-query" placeholder="search" />
                     </div>
-                    <a  class="glyphicon glyphicon-search"></a>
+                    <button  class="glyphicon glyphicon-search btn-search"></button>
                 </form>
                 </div>
             </header>
@@ -155,9 +172,17 @@
                 </ul>
                 <ul class="nav col-md-4 col-sm-4 col-xs-12 foot-nav foot-nav-right">
                     <li><a href="#">{% trans "SIZE GUIDE" %}</a></li>
-                    <li><a href="#">{% trans "NEWSLETTER SUBSCRIPTION" %}</a>
-                        <a>{% trans "Receive our news and customized offers by subscribing to our newsletter" %}</a>
+                    <li><a href="#" style="text-decoration:none;">{% trans "NEWSLETTER SUBSCRIPTION" %}</a>
                     </li>
+                    <div id="mc_embed_signup">
+                    <form action="//minibobi.us8.list-manage.com/subscribe/post?u=22d4aea709dafafb0d82ee7f0&amp;id=65f0657d80" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_22d4aea709dafafb0d82ee7f0_65f0657d80" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </form>
+                    </div>
                 </ul>
             </nav>
         </div>

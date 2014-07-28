@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-13 16:14+0800\n"
+"POT-Creation-Date: 2014-07-28 10:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,11 +351,11 @@ msgstr "媒体报导"
 msgid "Stockists"
 msgstr "存货区"
 
-#: templates/base.html:151
+#: templates/base.html:151 templates/notice.html:16
 msgid "Payment"
 msgstr "付款方式"
 
-#: templates/base.html:152
+#: templates/base.html:152 templates/notice.html:30
 msgid "Shipping"
 msgstr "运费"
 
@@ -367,7 +367,7 @@ msgstr "退换货服务"
 msgid "General terms and conditions of sales"
 msgstr "条款与细则"
 
-#: templates/base.html:157 templates/product.html:50
+#: templates/base.html:157 templates/product.html:48
 msgid "SIZE GUIDE"
 msgstr "尺码量表"
 
@@ -395,11 +395,11 @@ msgstr "产品描述"
 msgid "COLOR"
 msgstr "颜色"
 
-#: templates/cart.html:14 templates/product.html:59
+#: templates/cart.html:14 templates/product.html:57
 msgid "SIZE"
 msgstr "尺寸"
 
-#: templates/cart.html:15 templates/product.html:74
+#: templates/cart.html:15 templates/product.html:72
 msgid "QUANTITY"
 msgstr "数量"
 
@@ -431,7 +431,7 @@ msgstr "总计"
 msgid "The cart is empty!"
 msgstr "购物车是空的"
 
-#: templates/cart.html:97 templates/product.html:79
+#: templates/cart.html:97 templates/product.html:77
 msgid "CONTINUE SHOPPING"
 msgstr "继续购物"
 
@@ -470,6 +470,95 @@ msgstr "查看详情"
 #: templates/index.html:42 templates/list.html:42
 msgid "No Product"
 msgstr "没有商品"
+
+#: templates/notice.html:19
+msgid "How to order online:"
+msgstr "如何在网上订购我们的商品:"
+
+#: templates/notice.html:20
+msgid ""
+"Once you’ ve decided which product you want to buy, on the product page, "
+"click on “Add to cart”. Then after having chosen your shipping option, click "
+"on “confirm order”. After, fill the contact information form and click on "
+"“submit order”. You will receive an e-mail to make a transfer on our Alipay "
+"account."
+msgstr "一旦您决定了购买哪款商品，请在该商品页面点击“加入购物车”选项，选好了送货方式以后，点击“确认订单”选项，然后，填写联系方式并点击“提交订单”选项，请在收到转账提醒的消息以后将钱转入我们的支付宝账户，我们会尽快为您安排发货，请耐心等待"
+
+#: templates/notice.html:21
+msgid ""
+"Make a transfer from your Alipay account and send us an email at the same "
+"address to receive your purchase."
+msgstr "通过支付宝支付商品货款之后给相同的地址发送一封邮件来确认订单。"
+
+#: templates/notice.html:22
+msgid "Click <a href=\"/\">here</a> to shop now!"
+msgstr "点击<a href=\"/\">这里</a>去购买"
+
+#: templates/notice.html:25
+msgid "How to order from your phone:"
+msgstr "如何在网上订购我们的商品:"
+
+#: templates/notice.html:26
+msgid ""
+"You can use Minibobi’ s Weidian and pay with Alipay directly from your "
+"mobile phone."
+msgstr "你可以利用Minibobi的微店，并通过支付宝直接支付"
+
+#: templates/notice.html:33
+msgid ""
+"Standard delivery is FREE and usually arrives within 1 - 2 working days from "
+"the shipped date. It is delivered with SF Express, in Mainland China."
+msgstr "如果您选择普通的送货方式，我们将使用顺丰快递，免费为您送货（仅限中国大陆以及顺丰快递能够送达的地区），商品将在发货以后1-2个工作日内送达您的手上"
+
+#: templates/notice.html:36
+msgid ""
+"Rush delivery can be applied in Shanghai if you need the item as fast as "
+"possible (FEE: 50RMB). Our team will bring your purchase in person directly "
+"at home! Contact us: sales@minibobi.com"
+msgstr "如果您希望商品以最快的速度送达您的手上，可以选择我们为您提供的加急配送服务（仅限上海地区，费用：50元人民币）我们的团队会将商品亲自送达您的家中，请通过以下方式联系我们：sales@minibobi.com"
+
+#: templates/notice.html:39
+msgid " Delivery to certain postcodes is currently not available."
+msgstr "注意：某些地区顺丰快递暂时还无法送达，请购物前咨询"
+
+#: templates/notice.html:42
+msgid "Shipping rates:"
+msgstr "运费"
+
+#: templates/notice.html:43
+msgid "Standard delivery: <b>free shipping</b>"
+msgstr "普通配送：<b>免费</b>"
+
+#: templates/notice.html:44
+msgid "Rush delivery: <b>50 RMB</b>"
+msgstr "加急配送：<b>50元人民币</b>"
+
+#: templates/notice.html:47
+msgid "Returns & exchanges"
+msgstr "退货与换货"
+
+#: templates/notice.html:50
+msgid ""
+"The return and Exchange Policy described below applies <b>only to \n"
+"online purchase</b> website made through <a href=\"/\">www.minibobi.com</a>"
+msgstr "退货与换货请参照www.minibobi.com里的详细规则，本规则仅适用于网上购物"
+
+#: templates/notice.html:54
+msgid ""
+" Non-returnable: all sales or gift card, jewelleries and accessories. Non-"
+"returnable items cannot be returned for exchange, credit, or refunds."
+msgstr "不可退换商品：所有的降价商品、礼品卡、首饰以及配件都不能退换，包括：不能换品、退还现金或将消费金额退还信用卡"
+
+#: templates/notice.html:57
+msgid ""
+"For all other items, to be eligible for an exchange, credit or refund, the "
+"merchandise must be returned unworn with tags, intact, and must be "
+"accompanied by the original return form and customs document (if applicable)."
+msgstr "对于其他满足退换货要求的商品，购物者在退还原先购买的商品时必须保持衣物本身以及商标的完整，同时还请附上原先购物的消费凭证或者单据"
+
+#: templates/notice.html:60
+msgid " Returns are accepted within 28 days from the order date."
+msgstr "自提交订单之日起28日内可接受退货"
 
 #: templates/order.html:3
 msgid "Confirm order"
@@ -528,36 +617,35 @@ msgid "CLEAR ORDER"
 msgstr "清楚订单"
 
 #: templates/product.html:46
-msgid "COMPOSITION"
-msgstr "材质"
-
-#: templates/product.html:48
 msgid "SHIPPING"
 msgstr "运费"
 
-#: templates/product.html:70
+#: templates/product.html:68
 msgid "Please choose the size you want"
 msgstr "请选择您想要的尺寸"
 
-#: templates/product.html:78
+#: templates/product.html:76
 msgid "ADD TO CART"
 msgstr "添加至购物车"
 
-#: templates/product.html:85
+#: templates/product.html:83
 msgid "DETAILS"
 msgstr "详细信息"
 
-#: templates/product.html:87
+#: templates/product.html:85
 msgid "RETURNS"
 msgstr "退换货"
 
-#: templates/product.html:93
+#: templates/product.html:91
 msgid "No Messages"
 msgstr "暂无信息"
 
-#: templates/product.html:98
+#: templates/product.html:96
 msgid "RECOMMENDED PRODUCT"
 msgstr "推荐产品"
+
+#~ msgid "COMPOSITION"
+#~ msgstr "材质"
 
 #~ msgid "E-mail"
 #~ msgstr "电子邮件"

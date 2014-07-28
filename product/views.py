@@ -3,9 +3,20 @@ from django.template import RequestContext
 from product.models import Product, Category,Collection
 from banner.models import Banner
 from django.http import Http404,HttpResponse
+from django.db.models import Q
 
 def get_products(request):
-	products = Product.objects.all()
+	products = []
+	if request.GET:
+		if request.GET['s'] != '':
+			s = request.GET['s']
+			products = Product.objects.filter(
+					Q(name_en__contains=s) | Q(name_zh_cn__contains=s) | Q(short_description_en__contains=s) | Q(short_description_zh_cn__contains=s) 
+				)
+		else:
+			products = Product.objects.all()
+	else:
+		products = Product.objects.all()
 	return render_to_response('index.html',{'products':products},context_instance = RequestContext(request))
 
 def get_products_by_category(request,s):
@@ -53,5 +64,7 @@ def get_products_by_collection(request,cid):
 def get_sales(request):
 	products = Product.objects.exclude(discount__isnull = True)
 	return render_to_response('list.html',{'products':products},context_instance = RequestContext(request))
+
+
 
 

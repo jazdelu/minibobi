@@ -1,44 +1,63 @@
 {% extends "base-list.html" %}
 {% block title %}Notice{% endblock %}
 {% block main %}
+{% block css %}
+<style>
+    li{
+        line-height: 26px;
+    }
+    a{
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+{% load i18n %}
                 <div>
-                	<h4>付款</h4>
+                	<h4>{% blocktrans %}Payment{% endblocktrans %}</h4>
                     <ul>
                         <li>
-                        如何在网上订购我们的商品:<br/>
-                        一旦您决定了购买哪款商品，请在该商品页面点击“加入购物车”选项，选好了送货方式以后，点击“确认订单”选项，然后，填写联系方式并点击“提交订单”选项，请在收到转账提醒的消息以后将钱转入我们的支付宝账户，我们会尽快为您安排发货，请耐心等待
+<b>{% blocktrans %}How to order online:{% endblocktrans %}</b><br/>
+{% blocktrans %}Once you’ ve decided which product you want to buy, on the product page, click on “Add to cart”. Then after having chosen your shipping option, click on “confirm order”. After, fill the contact information form and click on “submit order”. You will receive an e-mail to make a transfer on our Alipay account.{% endblocktrans %}<br/>
+{% blocktrans %}Make a transfer from your Alipay account and send us an email at the same address to receive your purchase.{% endblocktrans %}<br/>
+{% blocktrans %}Click <a href="/">here</a> to shop now!{% endblocktrans %}
+                        </li>
+                        <li>
+<b>{% blocktrans %}How to order from your phone:{% endblocktrans %}</b><br/>
+{% blocktrans %}You can use Minibobi’ s Weidian and pay with Alipay directly from your mobile phone.{% endblocktrans %}
+    
                         </li>
                     </ul>
-                    <h4>送货</h4>
+                    <h4>{% blocktrans %}Shipping{% endblocktrans %}</h4>
                     <ul>
                         <li>
-                            如果您选择普通的送货方式，我们将使用顺丰快递，免费为您送货（仅限中国大陆以及顺丰快递能够送达的地区），商品将在发货以后1-2个工作日内送达您的手上
+{% blocktrans %}Standard delivery is FREE and usually arrives within 1 - 2 working days from the shipped date. It is delivered with SF Express, in Mainland China.{% endblocktrans %}
                         </li>
                         <li>
-                            如果您希望商品以最快的速度送达您的手上，可以选择我们为您提供的加急配送服务（仅限上海地区，费用：50元人民币）我们的团队会将商品亲自送达您的家中，请通过以下方式联系我们：sales@minibobi.com
+{% blocktrans %}Rush delivery can be applied in Shanghai if you need the item as fast as possible (FEE: 50RMB). Our team will bring your purchase in person directly at home! Contact us: sales@minibobi.com{% endblocktrans %}
                         </li>
                         <li>
-                            注意：某些地区顺丰快递暂时还无法送达，请购物前咨询
+                           {% blocktrans %} Delivery to certain postcodes is currently not available.{% endblocktrans %}
                         </li>
                         <li>
-                            配送费用:<br/>
-                            普通配送：免费 <br/>
-                            加急配送：50元人民币
+                            {% blocktrans %}Shipping rates:{% endblocktrans %}<br/>
+                            {% blocktrans %}Standard delivery: <b>free shipping</b>{% endblocktrans %}<br/>
+                            {% blocktrans %}Rush delivery: <b>50 RMB</b>{% endblocktrans %}
                         </li>
                     </ul>
-                    <h4>退货与换货</h4>
+                    <h4>{% blocktrans %}Returns & exchanges{% endblocktrans %}</h4>
                     <ul>
                         <li>
-                            退货与换货请参照www.minibobi.com里的详细规则，本规则仅适用于网上购物
+                            {% blocktrans %}The return and Exchange Policy described below applies <b>only to 
+online purchase</b> website made through <a href="/">www.minibobi.com</a>{% endblocktrans %}
                         </li>
                         <li>
-                            不可退换商品：所有的降价商品、礼品卡、首饰以及配件都不能退换，包括：不能换品、退还现金或将消费金额退还信用卡
+                           {% blocktrans %} Non-returnable: all sales or gift card, jewelleries and accessories. Non-returnable items cannot be returned for exchange, credit, or refunds.{% endblocktrans %}
                         </li>
                         <li>
-                            对于其他满足退换货要求的商品，购物者在退还原先购买的商品时必须保持衣物本身以及商标的完整，同时还请附上原先购物的消费凭证或者单据
+{% blocktrans %}For all other items, to be eligible for an exchange, credit or refund, the merchandise must be returned unworn with tags, intact, and must be accompanied by the original return form and customs document (if applicable).{% endblocktrans %}
                         </li>
                         <li>
-                            自提交订单之日起28日内可接受退货
+                           <b>{% blocktrans %} Returns are accepted within 28 days from the order date.{% endblocktrans %}</b>
                         </li>
                     </ul>
                 </div>
