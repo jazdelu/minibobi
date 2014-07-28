@@ -710,12 +710,12 @@ td tr{
 }
 .contact>form textarea{
 	background-color: #ebebeb;
-	color: #d5d5d5;
+	color: #333;
 	border:none;
 }
 .contact>form input{
 	background-color: #ebebeb;
-	color: #d5d5d5;
+	color: #333;
 	border: none;
 }
 .contact .contact_btn{
