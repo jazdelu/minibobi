@@ -23,5 +23,6 @@ class ProductAdminForm(ModelForm):
 		widgets = {
 			'stock':NumberInput(attrs={'class':'input-mini'}),
 			'long_description':AutosizedTextarea,
-			'price':EnclosedInput(prepend=u'¥',attrs={'class':'input-mini'})
+			'price':EnclosedInput(prepend=u'¥',attrs={'class':'input-mini'}),
+			'pub_date':SuitSplitDateTimeWidget,
 		}
