@@ -59,8 +59,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right ">
                 {% load i18n %}
-                    <li><a><span>{% trans "CALL US AT" %} 131231</span></a></li>
-                    <li><a><span>|</span></a></li>
+                    <li style="display:none;"><a><span>{% trans "CALL US AT" %} 131231</span></a></li>
+                    <li style="display:none;"><a><span>|</span></a></li>
                     <li><a href="/cart/">
                     <span class="icon-shopping-cart"></span>
                     <span>{{ cart.count }} ITEMS/¥{{ cart.total }}</span></a>
