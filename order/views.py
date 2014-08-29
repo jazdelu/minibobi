@@ -24,7 +24,7 @@ def send_mail(order,request):
 	text_content = strip_tags(html_content)
 	from_email = 'robot@minibobi.com'
 	subject = 'New Order:'+ order.serial
-	msg = EmailMultiAlternatives(subject, text_content, from_email, ['lushizhao@qq.com'])
+	msg = EmailMultiAlternatives(subject, text_content, from_email, ['sales@minibobi.com','lushizhao@qq.com'])
 	msg.attach_alternative(html_content, "text/html")
 	msg.send()
 

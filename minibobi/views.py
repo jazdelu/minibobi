@@ -11,10 +11,7 @@ from django.core.mail import EmailMultiAlternatives
 def home(request):
 	products = Product.objects.all()
 	banners = Banner.objects.exclude(location__isnull=False)
-	if request.user.is_authenticated():
-		return render_to_response("index.html",{"products":products,"banners":banners},context_instance = RequestContext(request))
-	else:
-		return HttpResponseRedirect('/admin/')
+	return render_to_response("index.html",{"products":products,"banners":banners},context_instance = RequestContext(request))
 
 def about(request):
 	page=''
