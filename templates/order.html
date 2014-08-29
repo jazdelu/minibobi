@@ -7,7 +7,7 @@
 <label>{% trans "NO ITEM FOUND IN SHOPPING CART" %}!</label>
 {% else %}
 <div class="col-md-6 col-xs-12 col-sm-12 order">
-	<form action ="/order/" class="form-horizontal" role = "form" method="post">
+	<form action ="/order/" class="form-horizontal" role = "form" method="post" id="order">
 		{% csrf_token %}	
 		<fieldset>
 		<legend>{% trans "CONTACT INFORMATION" %}</legend>
@@ -101,7 +101,7 @@
 {% block js %}
 <script type="text/javascript">
 	$("#submit").click(function(){
-		$("form").submit();
+		$("#order").submit();
 	});
 	$("#clear").click(function(){
 		$("form").find("input[type=text], textarea").val("");
