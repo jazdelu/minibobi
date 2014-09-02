@@ -32,7 +32,7 @@ class Color(models.Model):
 
 class Size(models.Model):
 	size = models.CharField(max_length = 128, verbose_name = _('Size'))
-	stock = models.IntegerField(verbose_name = "Stock")
+	stock = models.IntegerField(verbose_name = "Stock", null = True, blank = True)
 	product = models.ForeignKey('Product',blank = True, null = True,related_name = 'sizes')
 
 	class Meta:
