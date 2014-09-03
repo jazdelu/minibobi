@@ -94,7 +94,6 @@ class Product(models.Model):
 	collection = models.ForeignKey(Collection,related_name= 'products',default = 1)
 	category = TreeForeignKey('product.Category',related_name = 'products')
 	price = models.FloatField(verbose_name = _('Price'))
-	stock = models.IntegerField(verbose_name = _('Stock'))
 	color = models.ForeignKey(Color,related_name='products')
 	discount= models.ForeignKey(Discount,blank= True, null = True)
 	is_recommend = models.BooleanField(verbose_name = 'Add this product to Recommend Product')
