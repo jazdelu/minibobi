@@ -485,20 +485,7 @@ aside{
 	text-align: center;
 	border: 2px dashed #fcc4ac;
 }
-.about{
-	background-image: url("../images/about.jpg");
-	background-size: 100%;
-	min-height:400px;
-	padding-top: 4em;
-}
-.about div span{
-	display: block;
-	padding: 10px 5px;
-	border: 1px dashed #ccc;
-	background-color: #fff;
-	word-wrap:break-word;
-	min-height: 300px;
-}
+
 
 /*-----------------Product Page-----------------*/
 

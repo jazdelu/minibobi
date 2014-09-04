@@ -6,19 +6,8 @@
                 {% load i18n %}
                 <div class="col-md-12 col-xs-12 col-sm-12 contact">
                     <h3>{% trans "CONTACT US" %}</h3>
-                  <div class="banner" style="margin-bottom:20px;">
-                      <ul>
-                          <li>
-                              <img src="/static/minibobi/images/contact.jpg" class="img-responsive"/>
-                              <div class="text">
-                                <h4>MINI BOBI</h4>
-                                <h4>PARIS</h4>
-                                <br/>
-                                <h6>info@minibobi.com</h6>
-                                <h6>(+86)183-1710-0032</h6>
-                              </div>
-                          </li>
-                      </ul>
+                  <div style="margin-bottom:20px;">
+                    <img src="/static/minibobi/images/contact.jpg" class="img-responsive">
                   </div>
                    <form role="form" id='form' action='/contact/' method='post' class="form-horizontal col-md-6 col-xs-12 col-sm-12">
                      {% csrf_token %} 
