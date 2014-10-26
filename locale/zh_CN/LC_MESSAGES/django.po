@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-28 10:39+0800\n"
+"POT-Creation-Date: 2014-10-26 14:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: banner/models.py:9 lookbook/models.py:29 lookbook/models.py:32
-#: lookbook/models.py:33 product/models.py:155 product/models.py:158
-#: product/models.py:159
+#: lookbook/models.py:33 product/models.py:154 product/models.py:157
+#: product/models.py:158
 msgid "Image"
 msgstr ""
 
@@ -214,104 +214,100 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: product/models.py:97
-msgid "Stock"
-msgstr ""
-
-#: product/models.py:101
+#: product/models.py:100
 msgid "Long Description"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:101
 msgid "Page Title"
 msgstr ""
 
-#: product/models.py:102
+#: product/models.py:101
 msgid "Overwrites what is displayed at the top of your browser or in bookmarks"
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:102
 msgid "Description Meta Tag"
 msgstr ""
 
-#: product/models.py:103
+#: product/models.py:102
 msgid "A description of the page sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:104
+#: product/models.py:103
 msgid "Keywords Meta Tag"
 msgstr ""
 
-#: product/models.py:104
+#: product/models.py:103
 msgid "A list of comma separated keywords sometimes used by search engines."
 msgstr ""
 
-#: product/models.py:109 product/models.py:110
+#: product/models.py:108 product/models.py:109
 msgid "Product"
 msgstr ""
 
-#: product/models.py:156
+#: product/models.py:155
 msgid "Set this image to product cover?"
 msgstr ""
 
-#: templates/about.html:6 templates/base.html:102 templates/base.html.py:125
+#: templates/about.html:6 templates/base.html:119 templates/base.html.py:142
 msgid "ABOUT"
 msgstr "关于我们"
 
-#: templates/base-list.html:9 templates/base.html:79
-#: templates/base.html.py:123
+#: templates/base-list.html:9 templates/base.html:96
+#: templates/base.html.py:140
 msgid "GIRLS"
 msgstr "女装"
 
-#: templates/base-list.html:11 templates/base.html:81
+#: templates/base-list.html:11 templates/base.html:98
 msgid "TOP"
 msgstr "上衣"
 
-#: templates/base-list.html:12 templates/base.html:82
+#: templates/base-list.html:12 templates/base.html:99
 msgid "DRESS"
 msgstr "洋装"
 
-#: templates/base-list.html:13 templates/base.html:83
+#: templates/base-list.html:13 templates/base.html:100
 msgid "SKIRT"
 msgstr "裙子"
 
 #: templates/base-list.html:14 templates/base-list.html.py:25
-#: templates/base.html:84 templates/base.html.py:95
+#: templates/base.html:101 templates/base.html.py:112
 msgid "PANTS"
 msgstr "裤子"
 
 #: templates/base-list.html:15 templates/base-list.html.py:26
-#: templates/base.html:85 templates/base.html.py:96
+#: templates/base.html:102 templates/base.html.py:113
 msgid "CARDIGAN"
 msgstr "针织衫"
 
 #: templates/base-list.html:16 templates/base-list.html.py:27
-#: templates/base-list.html:33 templates/base.html:86
-#: templates/base.html.py:97
+#: templates/base-list.html:33 templates/base.html:103
+#: templates/base.html.py:114
 msgid "ACCESSORIES"
 msgstr "配件"
 
 #: templates/base-list.html:17 templates/base-list.html.py:28
-#: templates/base-list.html:31 templates/base.html:87
-#: templates/base.html.py:98 templates/base.html:101
-#: templates/base.html.py:124
+#: templates/base-list.html:31 templates/base.html:104
+#: templates/base.html.py:115 templates/base.html:118
+#: templates/base.html.py:141
 msgid "LOOKBOOK"
 msgstr "搭配推荐"
 
-#: templates/base-list.html:20 templates/base.html:90
-#: templates/base.html.py:122
+#: templates/base-list.html:20 templates/base.html:107
+#: templates/base.html.py:139
 msgid "BOYS"
 msgstr "男装"
 
-#: templates/base-list.html:22 templates/base.html:92
+#: templates/base-list.html:22 templates/base.html:109
 msgid "TSHIRT"
 msgstr "T恤"
 
-#: templates/base-list.html:23 templates/base.html:93
+#: templates/base-list.html:23 templates/base.html:110
 msgid "POLO"
 msgstr "POLO衫"
 
-#: templates/base-list.html:24 templates/base.html:94
+#: templates/base-list.html:24 templates/base.html:111
 msgid "SHIRT"
 msgstr "衬衫"
 
@@ -319,65 +315,61 @@ msgstr "衬衫"
 msgid "SALES"
 msgstr "限时特价"
 
-#: templates/base.html:45
+#: templates/base.html:62
 msgid "CALL US AT"
 msgstr "拨打电话"
 
-#: templates/base.html:103 templates/base.html.py:126
+#: templates/base.html:120 templates/base.html.py:143
 msgid "CONTACT"
 msgstr "联系我们"
 
-#: templates/base.html:104 templates/base.html.py:127
+#: templates/base.html:121 templates/base.html.py:144
 msgid "BLOG"
 msgstr "部落格"
 
-#: templates/base.html:143
+#: templates/base.html:160
 msgid "About"
 msgstr "关于我们"
 
-#: templates/base.html:144
+#: templates/base.html:161
 msgid "Contact"
 msgstr "联系我们"
 
-#: templates/base.html:145
+#: templates/base.html:162
 msgid "Blog"
 msgstr "部落格"
 
-#: templates/base.html:146
+#: templates/base.html:163
 msgid "Press review"
 msgstr "媒体报导"
 
-#: templates/base.html:147
+#: templates/base.html:164
 msgid "Stockists"
 msgstr "存货区"
 
-#: templates/base.html:151 templates/notice.html:16
+#: templates/base.html:168 templates/notice.html:16
 msgid "Payment"
 msgstr "付款方式"
 
-#: templates/base.html:152 templates/notice.html:30
+#: templates/base.html:169 templates/notice.html:30
 msgid "Shipping"
 msgstr "运费"
 
-#: templates/base.html:153
+#: templates/base.html:170
 msgid "Return"
 msgstr "退换货服务"
 
-#: templates/base.html:154
+#: templates/base.html:171
 msgid "General terms and conditions of sales"
-msgstr "条款与细则"
+msgstr "法律声明"
 
-#: templates/base.html:157 templates/product.html:48
+#: templates/base.html:174 templates/product.html:48
 msgid "SIZE GUIDE"
 msgstr "尺码量表"
 
-#: templates/base.html:158
+#: templates/base.html:175
 msgid "NEWSLETTER SUBSCRIPTION"
 msgstr "订阅我们"
-
-#: templates/base.html:159
-msgid "Receive our news and customized offers by subscribing to our newsletter"
-msgstr "订阅我们最新的消息以及促销活动"
 
 #: templates/cart.html:6
 msgid "SHOPPING BAG"
@@ -443,15 +435,15 @@ msgstr "确认订单"
 msgid "CONTACT US"
 msgstr "联系我们"
 
-#: templates/contact.html:12 templates/order.html:21
+#: templates/contact.html:15 templates/order.html:21
 msgid "Contact Name"
 msgstr "联系人信息"
 
-#: templates/contact.html:16
+#: templates/contact.html:18
 msgid "Contact E-mail"
 msgstr "联系人邮箱"
 
-#: templates/contact.html:20
+#: templates/contact.html:21
 msgid "Subject"
 msgstr "主题"
 
@@ -459,7 +451,7 @@ msgstr "主题"
 msgid "Content"
 msgstr "内容"
 
-#: templates/contact.html:28
+#: templates/contact.html:27
 msgid "Submit"
 msgstr "提交"
 
@@ -470,6 +462,76 @@ msgstr "查看详情"
 #: templates/index.html:42 templates/list.html:42
 msgid "No Product"
 msgstr "没有商品"
+
+#: templates/legal.html:2 templates/legal.html.py:19
+msgid "General terms & condition of sales"
+msgstr "法律声明"
+
+#: templates/legal.html:22
+msgid ""
+"The terms 'MINI BOBI', 'us' or 'we' refer to the owner of the website « "
+"Suzhou minibobi fashion design co. Ltd, whose registered office is 苏州市工业"
+"园区仁爱路 99 号C124."
+msgstr "术语“MINIBOBI”，“Us”或“We”指的是该网站«苏州minibobi时尚设计的共同拥有者。公司《苏州迷你波比时尚服装设计有限公司»，其注册地址为苏州市工业园区仁爱路99号C124。"
+
+#: templates/legal.html:24
+msgid ""
+"Our company registration number is 320594400034728. The term 'you' refers to "
+"the user or viewer of our website."
+msgstr "公司注册号为320594400034728.术语'You'是指我们网站的用户或浏览者。"
+
+#: templates/legal.html:25
+msgid "The use of this website is subject to the following terms of use:"
+msgstr "使用本网站应遵守以下使用条件："
+
+#: templates/legal.html:27
+msgid ""
+"The content of the pages of this website is for your general information and "
+"use only. It is subject to change without notice."
+msgstr "本网站的网页内容包括你的一般信息和使用。如有变更，恕不另行通知。"
+
+#: templates/legal.html:29
+msgid ""
+"The prices of the products sold in this website are indicated on the product-"
+"pages. We reserve the full right to make any variations at anytime "
+"(discount, sales, normal price, etc.)."
+msgstr "本网站出售的产品价格都标示在产品页面。我们保有对相关产品的变更（包括折扣，销售，正常价格等）。"
+
+#: templates/legal.html:31
+msgid ""
+"Your use of any information or materials on this website is entirely at your "
+"own risk, for which we shall not be liable. It shall be your own "
+"responsibility to ensure that any products, services or information "
+"available through this website meet your specific requirements."
+msgstr "您在本网站使用的任何信息或材料完全由您自己承担风险，对此我们不承担任何责任。请确保任何产品，服务或信息可通过本网站满足您的特定需求。"
+
+#: templates/legal.html:33
+msgid ""
+"This website contains material which is owned by or licensed to us. This "
+"material includes, but is not limited to, the design, layout, look, "
+"appearance and graphics. Reproduction is prohibited other than in accordance "
+"with the copyright notice, which forms part of these terms and conditions."
+msgstr "本网站包含所拥有或授权给我们的材料。这种材料包括，但不限于设计，布局，外观，整体和图形。禁止除按照版权声明构成这些条款和条件的一部分复制。"
+
+#: templates/legal.html:35
+msgid ""
+"All trade marks reproduced in this website which are not the property of, or "
+"licensed to, the operator are acknowledged on the website."
+msgstr "所有在本网站转载的商标都不属公司财产，或认可本网站的运营商。"
+
+#: templates/legal.html:37
+msgid ""
+"Unauthorised use of this website may give rise to a claim for damages and/or "
+"be a criminal offence."
+msgstr "未经授权使用本网站可能引起损害赔偿申索及/或构成刑事犯罪。"
+
+#: templates/legal.html:39
+msgid ""
+"From time to time this website may also include links to other websites. "
+"These links are provided for your convenience to provide further "
+"information. They do not signify that we endorse the website(s). We have no "
+"responsibility for the content of the linked website(s)."
+msgstr "本网站可能时常会包含其他网站的链接。这是为您提供方便以提供更进一步的消息。这并不意味着我们对这些网站（s）的认可。我们对链接的网站（S）的内容不承担任何责任。"
 
 #: templates/notice.html:19
 msgid "How to order online:"
@@ -482,7 +544,10 @@ msgid ""
 "on “confirm order”. After, fill the contact information form and click on "
 "“submit order”. You will receive an e-mail to make a transfer on our Alipay "
 "account."
-msgstr "一旦您决定了购买哪款商品，请在该商品页面点击“加入购物车”选项，选好了送货方式以后，点击“确认订单”选项，然后，填写联系方式并点击“提交订单”选项，请在收到转账提醒的消息以后将钱转入我们的支付宝账户，我们会尽快为您安排发货，请耐心等待"
+msgstr ""
+"一旦您决定了购买哪款商品，请在该商品页面点击“加入购物车”选项，选好了送货方式"
+"以后，点击“确认订单”选项，然后，填写联系方式并点击“提交订单”选项，请在收到转"
+"账提醒的消息以后将钱转入我们的支付宝账户，我们会尽快为您安排发货，请耐心等待"
 
 #: templates/notice.html:21
 msgid ""
@@ -508,14 +573,19 @@ msgstr "你可以利用Minibobi的微店，并通过支付宝直接支付"
 msgid ""
 "Standard delivery is FREE and usually arrives within 1 - 2 working days from "
 "the shipped date. It is delivered with SF Express, in Mainland China."
-msgstr "如果您选择普通的送货方式，我们将使用顺丰快递，免费为您送货（仅限中国大陆以及顺丰快递能够送达的地区），商品将在发货以后1-2个工作日内送达您的手上"
+msgstr ""
+"如果您选择普通的送货方式，我们将使用顺丰快递，免费为您送货（仅限中国大陆以及"
+"顺丰快递能够送达的地区），商品将在发货以后1-2个工作日内送达您的手上"
 
 #: templates/notice.html:36
 msgid ""
 "Rush delivery can be applied in Shanghai if you need the item as fast as "
 "possible (FEE: 50RMB). Our team will bring your purchase in person directly "
 "at home! Contact us: sales@minibobi.com"
-msgstr "如果您希望商品以最快的速度送达您的手上，可以选择我们为您提供的加急配送服务（仅限上海地区，费用：50元人民币）我们的团队会将商品亲自送达您的家中，请通过以下方式联系我们：sales@minibobi.com"
+msgstr ""
+"如果您希望商品以最快的速度送达您的手上，可以选择我们为您提供的加急配送服务"
+"（仅限上海地区，费用：50元人民币）我们的团队会将商品亲自送达您的家中，请通过"
+"以下方式联系我们：sales@minibobi.com"
 
 #: templates/notice.html:39
 msgid " Delivery to certain postcodes is currently not available."
@@ -547,14 +617,18 @@ msgstr "退货与换货请参照www.minibobi.com里的详细规则，本规则�
 msgid ""
 " Non-returnable: all sales or gift card, jewelleries and accessories. Non-"
 "returnable items cannot be returned for exchange, credit, or refunds."
-msgstr "不可退换商品：所有的降价商品、礼品卡、首饰以及配件都不能退换，包括：不能换品、退还现金或将消费金额退还信用卡"
+msgstr ""
+"不可退换商品：所有的降价商品、礼品卡、首饰以及配件都不能退换，包括：不能换"
+"品、退还现金或将消费金额退还信用卡"
 
 #: templates/notice.html:57
 msgid ""
 "For all other items, to be eligible for an exchange, credit or refund, the "
 "merchandise must be returned unworn with tags, intact, and must be "
 "accompanied by the original return form and customs document (if applicable)."
-msgstr "对于其他满足退换货要求的商品，购物者在退还原先购买的商品时必须保持衣物本身以及商标的完整，同时还请附上原先购物的消费凭证或者单据"
+msgstr ""
+"对于其他满足退换货要求的商品，购物者在退还原先购买的商品时必须保持衣物本身以"
+"及商标的完整，同时还请附上原先购物的消费凭证或者单据"
 
 #: templates/notice.html:60
 msgid " Returns are accepted within 28 days from the order date."
@@ -643,6 +717,10 @@ msgstr "暂无信息"
 #: templates/product.html:96
 msgid "RECOMMENDED PRODUCT"
 msgstr "推荐产品"
+
+#~ msgid ""
+#~ "Receive our news and customized offers by subscribing to our newsletter"
+#~ msgstr "订阅我们最新的消息以及促销活动"
 
 #~ msgid "COMPOSITION"
 #~ msgstr "材质"

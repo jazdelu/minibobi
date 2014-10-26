@@ -1,0 +1,42 @@
+{% extends "base-list.html" %}
+{% block title %}General terms & condition of sales{% endblock %}
+{% block main %}
+{% block css %}
+<style>
+	div{
+		padding: 0px 20px;
+	}
+    li{
+        line-height: 26px;
+    }
+    a{
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+{% load i18n %}
+<div>
+<h4>{% blocktrans %}General terms & condition of sales{% endblocktrans %}</h4>
+<br/>
+
+<p>{% blocktrans %}The terms 'MINI BOBI', 'us' or 'we' refer to the owner of the website « Suzhou minibobi fashion design co. Ltd, whose registered office is 苏州市工业园区仁爱路 99 号C124.{% endblocktrans %}</p>
+ 
+<p>{% blocktrans %}Our company registration number is 320594400034728. The term 'you' refers to the user or viewer of our website.{% endblocktrans %}</p>
+<p>{% blocktrans %}The use of this website is subject to the following terms of use:{% endblocktrans %}</p>
+<ul>
+<li>{% blocktrans %}The content of the pages of this website is for your general information and use only. It is subject to change without notice.{% endblocktrans %}</li>
+
+<li>{% blocktrans %}The prices of the products sold in this website are indicated on the product-pages. We reserve the full right to make any variations at anytime (discount, sales, normal price, etc.).{% endblocktrans %}</li>
+
+<li>{% blocktrans %}Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.{% endblocktrans %}</li>
+
+<li>{% blocktrans %}This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.{% endblocktrans %}</li>
+
+<li>{% blocktrans %}All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.{% endblocktrans %}</li>
+
+<li>{% blocktrans %}Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.{% endblocktrans %}</li>
+
+<li>{% blocktrans %}From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).{% endblocktrans %}</li>
+</ul>
+</div>
+{% endblock %}

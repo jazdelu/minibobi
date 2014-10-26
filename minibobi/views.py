@@ -43,6 +43,9 @@ def set_language(request):
 def notice(request):
 	return render_to_response("notice.html",context_instance = RequestContext(request))
 
+def legal(request):
+	return render_to_response("legal.html",context_instance = RequestContext(request))
+
 
 def contact(request):
 	status = 0

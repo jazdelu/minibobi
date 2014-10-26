@@ -116,7 +116,8 @@ a.active{
 	margin-top: 15px;
 }
 .top ul>li>a{
-	padding: 2px 5px
+	padding: 2px 5px;
+	text-decoration:none;
 }
 .top .sns{
 	line-height: 26px;
