@@ -7,7 +7,7 @@
                     <ul>
                         {% for b in banners %}
                         <li>
-                            <img src="{{ b.image.url }}" class="img-responsive"/>
+                            <a href="{{ b.url|default_if_none:'#' }}"><img src="{{ b.image.url }}" class="img-responsive"/></a>
                         </li>
                         {% endfor %}
                     </ul>

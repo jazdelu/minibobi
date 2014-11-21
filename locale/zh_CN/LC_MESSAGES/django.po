@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-26 14:07+0800\n"
+"POT-Creation-Date: 2014-11-21 16:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -271,24 +271,24 @@ msgstr "洋装"
 msgid "SKIRT"
 msgstr "裙子"
 
-#: templates/base-list.html:14 templates/base-list.html.py:25
+#: templates/base-list.html:14 templates/base-list.html.py:26
 #: templates/base.html:101 templates/base.html.py:112
 msgid "PANTS"
 msgstr "裤子"
 
-#: templates/base-list.html:15 templates/base-list.html.py:26
+#: templates/base-list.html:15 templates/base-list.html.py:27
 #: templates/base.html:102 templates/base.html.py:113
 msgid "CARDIGAN"
 msgstr "针织衫"
 
-#: templates/base-list.html:16 templates/base-list.html.py:27
-#: templates/base-list.html:33 templates/base.html:103
+#: templates/base-list.html:16 templates/base-list.html.py:28
+#: templates/base-list.html:34 templates/base.html:103
 #: templates/base.html.py:114
 msgid "ACCESSORIES"
 msgstr "配件"
 
-#: templates/base-list.html:17 templates/base-list.html.py:28
-#: templates/base-list.html:31 templates/base.html:104
+#: templates/base-list.html:17 templates/base-list.html.py:29
+#: templates/base-list.html:32 templates/base.html:104
 #: templates/base.html.py:115 templates/base.html:118
 #: templates/base.html.py:141
 msgid "LOOKBOOK"
@@ -303,15 +303,19 @@ msgstr "男装"
 msgid "TSHIRT"
 msgstr "T恤"
 
-#: templates/base-list.html:23 templates/base.html:110
+#: templates/base-list.html:23
+msgid "SHORT"
+msgstr "短裤"
+
+#: templates/base-list.html:24 templates/base.html:110
 msgid "POLO"
 msgstr "POLO衫"
 
-#: templates/base-list.html:24 templates/base.html:111
+#: templates/base-list.html:25 templates/base.html:111
 msgid "SHIRT"
 msgstr "衬衫"
 
-#: templates/base-list.html:32
+#: templates/base-list.html:33
 msgid "SALES"
 msgstr "限时特价"
 
@@ -363,7 +367,7 @@ msgstr "退换货服务"
 msgid "General terms and conditions of sales"
 msgstr "法律声明"
 
-#: templates/base.html:174 templates/product.html:48
+#: templates/base.html:174 templates/product.html:85
 msgid "SIZE GUIDE"
 msgstr "尺码量表"
 
@@ -463,7 +467,7 @@ msgstr "查看详情"
 msgid "No Product"
 msgstr "没有商品"
 
-#: templates/legal.html:2 templates/legal.html.py:19
+#: templates/legal.html:19
 msgid "General terms & condition of sales"
 msgstr "法律声明"
 
@@ -472,7 +476,10 @@ msgid ""
 "The terms 'MINI BOBI', 'us' or 'we' refer to the owner of the website « "
 "Suzhou minibobi fashion design co. Ltd, whose registered office is 苏州市工业"
 "园区仁爱路 99 号C124."
-msgstr "术语“MINIBOBI”，“Us”或“We”指的是该网站«苏州minibobi时尚设计的共同拥有者。公司《苏州迷你波比时尚服装设计有限公司»，其注册地址为苏州市工业园区仁爱路99号C124。"
+msgstr ""
+"术语“MINIBOBI”，“Us”或“We”指的是该网站«苏州minibobi时尚设计的共同拥有者。公司"
+"《苏州迷你波比时尚服装设计有限公司»，其注册地址为苏州市工业园区仁爱路99号"
+"C124。"
 
 #: templates/legal.html:24
 msgid ""
@@ -495,7 +502,9 @@ msgid ""
 "The prices of the products sold in this website are indicated on the product-"
 "pages. We reserve the full right to make any variations at anytime "
 "(discount, sales, normal price, etc.)."
-msgstr "本网站出售的产品价格都标示在产品页面。我们保有对相关产品的变更（包括折扣，销售，正常价格等）。"
+msgstr ""
+"本网站出售的产品价格都标示在产品页面。我们保有对相关产品的变更（包括折扣，销"
+"售，正常价格等）。"
 
 #: templates/legal.html:31
 msgid ""
@@ -503,7 +512,9 @@ msgid ""
 "own risk, for which we shall not be liable. It shall be your own "
 "responsibility to ensure that any products, services or information "
 "available through this website meet your specific requirements."
-msgstr "您在本网站使用的任何信息或材料完全由您自己承担风险，对此我们不承担任何责任。请确保任何产品，服务或信息可通过本网站满足您的特定需求。"
+msgstr ""
+"您在本网站使用的任何信息或材料完全由您自己承担风险，对此我们不承担任何责任。"
+"请确保任何产品，服务或信息可通过本网站满足您的特定需求。"
 
 #: templates/legal.html:33
 msgid ""
@@ -511,7 +522,9 @@ msgid ""
 "material includes, but is not limited to, the design, layout, look, "
 "appearance and graphics. Reproduction is prohibited other than in accordance "
 "with the copyright notice, which forms part of these terms and conditions."
-msgstr "本网站包含所拥有或授权给我们的材料。这种材料包括，但不限于设计，布局，外观，整体和图形。禁止除按照版权声明构成这些条款和条件的一部分复制。"
+msgstr ""
+"本网站包含所拥有或授权给我们的材料。这种材料包括，但不限于设计，布局，外观，"
+"整体和图形。禁止除按照版权声明构成这些条款和条件的一部分复制。"
 
 #: templates/legal.html:35
 msgid ""
@@ -531,7 +544,10 @@ msgid ""
 "These links are provided for your convenience to provide further "
 "information. They do not signify that we endorse the website(s). We have no "
 "responsibility for the content of the linked website(s)."
-msgstr "本网站可能时常会包含其他网站的链接。这是为您提供方便以提供更进一步的消息。这并不意味着我们对这些网站（s）的认可。我们对链接的网站（S）的内容不承担任何责任。"
+msgstr ""
+"本网站可能时常会包含其他网站的链接。这是为您提供方便以提供更进一步的消息。这"
+"并不意味着我们对这些网站（s）的认可。我们对链接的网站（S）的内容不承担任何责"
+"任。"
 
 #: templates/notice.html:19
 msgid "How to order online:"
@@ -694,6 +710,10 @@ msgstr "清楚订单"
 msgid "SHIPPING"
 msgstr "运费"
 
+#: templates/product.html:48
+msgid "RETURNS"
+msgstr "退换货"
+
 #: templates/product.html:68
 msgid "Please choose the size you want"
 msgstr "请选择您想要的尺寸"
@@ -706,17 +726,12 @@ msgstr "添加至购物车"
 msgid "DETAILS"
 msgstr "详细信息"
 
-#: templates/product.html:85
-msgid "RETURNS"
-msgstr "退换货"
-
-#: templates/product.html:91
-msgid "No Messages"
-msgstr "暂无信息"
-
 #: templates/product.html:96
 msgid "RECOMMENDED PRODUCT"
 msgstr "推荐产品"
+
+#~ msgid "No Messages"
+#~ msgstr "暂无信息"
 
 #~ msgid ""
 #~ "Receive our news and customized offers by subscribing to our newsletter"

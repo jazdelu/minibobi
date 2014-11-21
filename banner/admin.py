@@ -11,7 +11,7 @@ class BannerAdminForm(ModelForm):
 		}
 
 class BannerAdmin(admin.ModelAdmin):
-	list_display=("image","location","weight")
+	list_display=("image","location","weight",'url')
 	form  = BannerAdminForm
 
 

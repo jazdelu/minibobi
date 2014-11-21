@@ -107,6 +107,7 @@
                     <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{% trans "BOYS" %}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
                         <ul class="dropdown-menu wideMenuItem">  
                             <li><a href="/product/boys/tshirt/">{% trans "TSHIRT" %}</a></li>
+                            <li><a href="/product/boys/short/">{% trans "SHORT" %}</a></li>
                             <li><a href="/product/boys/polo/">{% trans "POLO" %}</a></li>
                             <li><a href="/product/boys/shirt/">{% trans "SHIRT" %}</a></li>
                             <li><a href="/product/boys/pants/">{% trans "PANTS" %}</a></li>
@@ -212,7 +213,11 @@
 </script>
 <script type="text/javascript">
   $(function() {
-    $(".banner ul").responsiveSlides();
+    $(".banner ul").responsiveSlides({
+        pause:false,
+        speed:1000,
+        timeout:7000
+    });
   });
 </script>
 <script type="text/javascript">

@@ -9,6 +9,7 @@ class Banner(models.Model):
 	image = models.ImageField(upload_to = 'banner/',verbose_name = _('Image'))
 	location = TreeForeignKey(Category,blank = True, null = True, help_text="Leave blank for the homepage banners")
 	weight = models.IntegerField(verbose_name = _('Weight'),help_text = _('Matters the order of banners'))
+	url = models.URLField(verbose_name = _('URL'),blank = True, null = True,default = '#', help_text = 'The website you want to link')
 
 	class Meta:
 		verbose_name = _('Banner')
