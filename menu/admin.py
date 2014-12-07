@@ -8,7 +8,7 @@ from modeltranslation.admin import TranslationAdmin
 
 class MenuAdmin(MPTTModelAdmin):
 	mptt_level_indent = 20
-	fields = ('name',)
+	fields = ('name','parent',)
 	list_display = ('name',)
 
 admin.site.register(Menu,MenuAdmin)
