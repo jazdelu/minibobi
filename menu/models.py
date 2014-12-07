@@ -49,7 +49,7 @@ class MenuItem(MPTTModel):
 		verbose_name_plural = u'MenuItem'
 
 	def __unicode__(self):
-		return self.menu.name
+		return self.name
 
 
 
