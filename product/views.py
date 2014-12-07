@@ -19,14 +19,14 @@ def get_products(request):
 		products = Product.objects.all()
 	return render_to_response('index.html',{'products':products},context_instance = RequestContext(request))
 
-def get_products_by_category(request,s):
-	slugs = filter(None,s.split('/'))
+def get_products_by_category(request,cid):
+
 	category = ''
 	products = []
 	query_c = []
 	banners = []
 	try:
-		category = Category.objects.get(slug = slugs[-1])
+		category = Category.objects.get(id = cid)
 		for c in category.get_descendants(include_self=True):
 			query_c.append(c)
 	except Exception as e:

@@ -6,37 +6,20 @@
     <nav>
         <ul class="nav side-nav">
             {% load i18n %}
-            <li><a href="/product/girls/">{% trans 'GIRLS' %}</a>
-                <ul class="nav">  
-                    <li><a href="/product/girls/top/">{% trans 'TOP' %}</a></li>
-                    <li><a href="/product/girls/dress/">{% trans 'DRESS' %}</a></li>
-                    <li><a href="/product/girls/skirt/">{% trans 'SKIRT' %}</a></li>
-                    <li><a href="/product/girls/pants">{% trans 'PANTS' %}</a></li>
-                    <li><a href="/product/girls/cardigan">{% trans 'CARDIGAN' %}</a></li>
-                    <li><a href="/product/accessories/">{% trans 'ACCESSORIES' %}</a></li>
-                    <li><a href="/lookbook/">{% trans 'LOOKBOOK' %}</a></li>
+            {% for i in sidebar_items %}
+            {% if i.is_root_node %}
+            <li>
+                <a href="{{ i.url }}">{{ i.name }}</a>
+                <ul class="nav">
+                    {% for ii in i.get_children %}
+                    <li><a href="{{ ii.url }}">{{ ii.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </li>
-            <li><a href="/product/boys/">{% trans 'BOYS' %}</a>
-                <ul class="nav">  
-                    <li><a href="/product/boys/tshirt/">{% trans 'TSHIRT' %}</a></li>
-                    <li><a href="/product/boys/short/">{% trans 'SHORT' %}</a></li>
-                    <li><a href="/product/boys/polo/">{% trans 'POLO' %}</a></li>
-                    <li><a href="/product/boys/shirt/">{% trans 'SHIRT' %}</a></li>
-                    <li><a href="/product/boys/pants/">{% trans 'PANTS' %}</a></li>
-                    <li><a href="/product/boys/cardigan">{% trans 'CARDIGAN' %}</a></li>
-                    <li><a href="/product/accessories/">{% trans 'ACCESSORIES' %}</a></li>
-                    <li><a href="/lookbook/">{% trans 'LOOKBOOK' %}</a></li>
-                </ul>
-            </li>
-            <li><a href="/lookbook/">{% trans 'LOOKBOOK' %}</a></li>
-            <li><a href="/sales/">{% trans 'SALES' %}</a></li>
-            <li><a href="/product/accessories/">{% trans 'ACCESSORIES' %}</a>
-                <ul class="nav">  
-                    <li><a href="#">MINI BOBI</a></li>
-                    <li><a href="#">ANA</a></li>
-                </ul>
-            </li>
+            {% endif %}
+            {% empty %}
+            <label>NO MENU SETTING FOUND!</label>
+            {% endfor %}
         </ul>
     </nav>
 </aside>

@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'lookbook',
     'page',
     'banner',
+    'menu',
     'south',
     'modeltranslation',
 )
@@ -69,6 +70,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.static',
     'django.core.context_processors.i18n',
     'cart.processors.get_cart_by_session',
+    'menu.processors.get_menu',
 )
 
 TEMPLATE_DIRS = (
@@ -157,6 +159,7 @@ SUIT_CONFIG = {
     # menu
     'MENU':(
         {'app':'auth','label':u'User','icon':'icon-user'},
+        {'app':'menu','label':u'Menu','icon':'icon-bookmark'},
         {'app':'banner','label':u'Banner','icon':' icon-eye-open'},
         {'app':'lookbook','label':u'Lookbook','icon': 'icon-picture'},
         {'app':'page','label':u'Page','icon':'icon-bookmark'},

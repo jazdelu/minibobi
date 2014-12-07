@@ -66,9 +66,9 @@
                     <li><a><span>|</span></a></li>
                     <li><a href="#"><span class="sns icon-barcode"></span></a></li>
                     <li>&nbsp;&nbsp;&nbsp;</li>
-                    <li><a href="http://www.weibo.com/5212691907/"><span class="sns icon-social-weibo"></span></a></li>
+                    <li><a href="http://www.weibo.com/5212691907/" target="_blank"><span class="sns icon-social-weibo"></span></a></li>
                     <li>&nbsp;&nbsp;&nbsp;</li>
-                    <li><a href="http://www.renren.com/848623103/profile"><span class="sns icon-social-renren"></span></a></li>
+                    <li><a href="http://www.renren.com/848623103/profile" target="_blank"><span class="sns icon-social-renren"></span></a></li>
                     <li>&nbsp;&nbsp;&nbsp;</li>
                     <li><a href="http://www.facebook.com/minibobiparis" target="_blank"><span class="sns icon-social-facebook"></span></a></li>
                     <li>&nbsp;&nbsp;&nbsp;</li>
@@ -89,35 +89,24 @@
                     <a href="/cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 </div>
             </div>
-            <div class="col-lg-12 col-sm-12 col-xs-12 mobile-nav">
+            <div class="col-lg-12 col-sm-12 col-xs-12  mobile-nav">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{% trans "GIRLS" %}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="dropdown-menu wideMenuItem">  
-                            <li><a href="/product/girls/top/">{% trans "TOP" %}</a></li>
-                            <li><a href="/product/girls/dress/">{% trans "DRESS" %}</a></li>
-                            <li><a href="/product/girls/skirt/">{% trans "SKIRT" %}</a></li>
-                            <li><a href="/product/girls/pants-girls">{% trans "PANTS" %}</a></li>
-                            <li><a href="/product/girls/cardigan-girls">{% trans "CARDIGAN" %}</a></li>
-                            <li><a href="/product/accessories/">{% trans "ACCESSORIES" %}</a></li>
-                            <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
+                    {% for i in items %}
+                    {% if i.get_children and i.is_root_node %}
+                    <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{{ i.name }}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <ul class="dropdown-menu wideMenuItem">
+                            {% for ii in i.get_children %}
+                            <li><a href="{{ ii.url }}">{{ ii.name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
-                    <li><a href="#" class="dropdown-toggle" data-toggle ="dropdown"><span>{% trans "BOYS" %}</span><span class="glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="dropdown-menu wideMenuItem">  
-                            <li><a href="/product/boys/tshirt/">{% trans "TSHIRT" %}</a></li>
-                            <li><a href="/product/boys/short/">{% trans "SHORT" %}</a></li>
-                            <li><a href="/product/boys/polo/">{% trans "POLO" %}</a></li>
-                            <li><a href="/product/boys/shirt/">{% trans "SHIRT" %}</a></li>
-                            <li><a href="/product/boys/pants/">{% trans "PANTS" %}</a></li>
-                            <li><a href="/product/boys/cardigan">{% trans "CARDIGAN" %}</a></li>
-                            <li><a href="/product/accessories/">{% trans "ACCESSORIES" %}</a></li>
-                            <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/lookbook/"><span>{% trans "LOOKBOOK" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="/about/"><span>{% trans "ABOUT" %}</span><span  class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="/contact/"><span>{% trans "CONTACT" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    <li><a href="#"><span>{% trans "BLOG" %}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    {% elif i.is_root_node %}
+                    <li><a href="{{ i.url }}"><span>{{ i.name }}</span><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    {% endif %}
+                    {% empty %}
+                    <label>NO MENU SETTING FOUND!</label>
+                    {% endfor %}
+
                 </ul>
             </div>
                 <div class="col-md-7 col-sm-7 col-xs-12 hidden-xs logo">
@@ -135,12 +124,9 @@
             <div class="col-md-12 col-sm-12 navbar hidden-xs">
                 <nav>
                     <ul class="nav navbar-nav main-nav">
-                        <li><a href="/product/boys/">{% trans "BOYS" %}</a></li>
-                        <li><a href="/product/girls/">{% trans "GIRLS" %}</a></li>
-                        <li><a href="/lookbook/">{% trans "LOOKBOOK" %}</a></li>
-                        <li><a href="/about/">{% trans "ABOUT" %}</a></li>
-                        <li><a href="/contact/">{% trans "CONTACT" %}</a></li>
-                        <li><a href="#">{% trans "BLOG" %}</a></li>
+                        {% for i in main_items %}
+                        <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </nav>
             </div>
