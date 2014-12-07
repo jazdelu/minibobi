@@ -16,9 +16,23 @@ MENU_CHOICE = (
 	( '1', u'main'),
 )
 
+class Menu(MPTTModel):
+	name = models.CharField(max_length = 128, verbose_name = u'Name')
+	parent = TreeForeignKey('self',verbose_name = u'Parent',null = True, blank = True)
+
+	class MPTTMeta:
+		order_insertion_by = ['name']
+
+	class Meta:
+		verbose_name = u'Menu'
+		verbose_name_plural = u'Menu'
+
+	def __unicode__(self):
+		return self.name
+
 class MenuItem(MPTTModel):
 	name = models.CharField(max_length = 128, verbose_name = u'Name')
-	menu = models.CharField(max_length = 128, verbose_name = u'Location', choices = MENU_CHOICE, default = 0)
+	menu = TreeForeignKey('menu',verbose_name = u'Menu',null = True, blank = True)
 	parent = TreeForeignKey('self',verbose_name = u'Parent',null = True, blank = True)
 	mtype = models.CharField(max_length = 128, choices = MTYPE_CHOICE, verbose_name = u'Menu Type')
 	category = TreeForeignKey(Category,verbose_name = u'Category', blank = True, null = True,related_name = 'items')
@@ -31,11 +45,11 @@ class MenuItem(MPTTModel):
 		order_insertion_by = ['menu','-weight']
 
 	class Meta:
-		verbose_name = u'Menu'
-		verbose_name_plural = u'Menu'
+		verbose_name = u'MenuItem'
+		verbose_name_plural = u'MenuItem'
 
 	def __unicode__(self):
-		return self.name
+		return self.name+'('+self.menu.name+')'
 
 
 

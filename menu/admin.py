@@ -1,10 +1,17 @@
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
-from menu.models import MenuItem
+from menu.models import MenuItem, Menu
 from django.forms import ModelForm
 from suit.widgets import EnclosedInput
 from modeltranslation.admin import TranslationAdmin
 # Register your models here.
+
+class MenuAdmin(MPTTModelAdmin):
+	mptt_level_indent = 20
+	fields = ('name',)
+	list_display = ('name',)
+
+admin.site.register(Menu,MenuAdmin)
 
 class MenuItemAdminForm(ModelForm):
 	class Meta:
