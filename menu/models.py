@@ -32,7 +32,7 @@ class Menu(MPTTModel):
 
 class MenuItem(MPTTModel):
 	name = models.CharField(max_length = 128, verbose_name = u'Name')
-	menu = TreeForeignKey('menu',verbose_name = u'Menu')
+	menu = TreeForeignKey('menu',verbose_name = u'Menu',default = 0)
 	parent = TreeForeignKey('self',verbose_name = u'Parent',null = True, blank = True)
 	mtype = models.CharField(max_length = 128, choices = MTYPE_CHOICE, verbose_name = u'Menu Type')
 	category = TreeForeignKey(Category,verbose_name = u'Category', blank = True, null = True,related_name = 'items')
@@ -49,7 +49,7 @@ class MenuItem(MPTTModel):
 		verbose_name_plural = u'MenuItem'
 
 	def __unicode__(self):
-		return self.name
+		return self.menu.name
 
 
 
