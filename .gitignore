@@ -58,3 +58,4 @@ docs/_build/
 local_settings.py
 */migrations/
 设计图/
+qiniustorage/
