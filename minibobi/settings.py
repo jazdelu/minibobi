@@ -136,7 +136,7 @@ QINIU_ACCESS_KEY='8UYiGo3ZTdwkSD6QWXsvysWy79OmtbJ2-I2AuAa_'
 QINIU_SECRET_KEY='f8xbN8LewTLJx1ZMfC0n5uLa_6zuD-OXoDhwv_Vg'
 QINIU_BUCKET_NAME='minibobi'
 QINIU_BUCKET_DOMAIN='7fv9er.com1.z0.glb.clouddn.com'
-DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuMediaStorage'
+DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
 
 
 EMAIL_HOST = 'smtp.exmail.qq.com'
