@@ -127,6 +127,7 @@ STATICFILES_FINDERS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 MEDIA_URL = '/upload/'
+MEDIA_ROOT = 'http://7fv9er.com1.z0.glb.clouddn.com/upload/'
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'upload/')
