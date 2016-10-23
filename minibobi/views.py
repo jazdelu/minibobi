@@ -54,7 +54,7 @@ def contact(request):
 		email = request.POST.get('email')
 		subject = request.POST.get('subject')
 		content = request.POST.get('content')
-		from_email = 'robot@minibobi.com'
+		from_email = 'noreply@minibobi.com'
 		text_content=''
 		text_content += name+'('+email+')'+':  '
 		text_content += content

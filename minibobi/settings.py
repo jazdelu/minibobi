@@ -143,6 +143,8 @@ EMAIL_HOST = 'smtp.exmail.qq.com'
 EMAIL_HOST_USER = 'noreply@minibobi.com'
 EMAIL_HOST_PASSWORD = 'Lushizhao1989jaz'
 DEFAULT_FROM_EMAIL = 'noreply@minibobi.com'
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
 SERVER_EMAIL = 'noreply@minibobi.com'
 
 

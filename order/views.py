@@ -22,7 +22,7 @@ def serial_generator():
 def send_mail(order,request):
 	html_content = render_to_string('email_template.html', {'order':order},context_instance=RequestContext(request))
 	text_content = strip_tags(html_content)
-	from_email = 'robot@minibobi.com'
+	from_email = 'noreply@minibobi.com'
 	subject = 'New Order:'+ order.serial
 	msg = EmailMultiAlternatives(subject, text_content, from_email, ['sales@minibobi.com','lushizhao@qq.com',])
 	msg.attach_alternative(html_content, "text/html")
