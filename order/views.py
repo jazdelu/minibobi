@@ -46,7 +46,7 @@ def order(request):
 		del request.session['cart']
 		order.serial = serial_generator()
 		order.save()
-		send_mail(order,request)
+		##send_mail(order,request)
 		for i in cart.items.all():
 			i.size.stock-=i.quantity
 			i.size.save()
