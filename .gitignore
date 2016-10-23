@@ -59,3 +59,4 @@ local_settings.py
 */migrations/
 设计图/
 qiniustorage/
+.DS_Store

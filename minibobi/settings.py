@@ -140,10 +140,10 @@ DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
 
 
 EMAIL_HOST = 'smtp.exmail.qq.com'
-EMAIL_HOST_USER = 'robot@minibobi.com'
-EMAIL_HOST_PASSWORD = 'lushizhao1129'
-DEFAULT_FROM_EMAIL = 'robot@minibobi.com'
-SERVER_EMAIL = 'robot@minibobi.com'
+EMAIL_HOST_USER = 'noreply@minibobi.com'
+EMAIL_HOST_PASSWORD = 'Lushizhao1989jaz'
+DEFAULT_FROM_EMAIL = 'noreply@minibobi.com'
+SERVER_EMAIL = 'noreply@minibobi.com'
 
 
 SUIT_CONFIG = {
