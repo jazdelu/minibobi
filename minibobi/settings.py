@@ -139,7 +139,7 @@ QINIU_BUCKET_DOMAIN='7fv9er.com1.z0.glb.clouddn.com'
 DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
 
 
-EMAIL_HOST = 'smtp.exmail.qq.com'
+EMAIL_HOST = 'hwsmtp.exmail.qq.com'
 EMAIL_HOST_USER = 'noreply@minibobi.com'
 EMAIL_HOST_PASSWORD = 'Lushizhao1989jaz'
 DEFAULT_FROM_EMAIL = 'noreply@minibobi.com'
