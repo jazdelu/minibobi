@@ -8,8 +8,8 @@ from order.forms import OrderForm
 from product.models import Size
 from cart.models import Cart
 import datetime,random
-from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
+from django.core.mail import EmailMultiAlternatives, send_mail
 
 def serial_generator():
 	serial ='BB'
@@ -19,13 +19,13 @@ def serial_generator():
 	return serial
 # Create your views here.
 
-def send_mail(order,request):
+def mailing(order,request):
 	html_content = render_to_string('email_template.html', {'order':order},context_instance=RequestContext(request))
 	text_content = strip_tags(html_content)
 	from_email = 'noreply@minibobi.com'
 	subject = 'New Order:'+ order.serial
-	msg = EmailMultiAlternatives(subject, text_content, from_email, ['sales@minibobi.com','lushizhao@qq.com',])
-	msg.attach_alternative(html_content, "text/html")
+	msg = EmailMultiAlternatives(subject,text_content, from_email,['lushizhao@qq.com','sales@minibobi.com',])
+	msg.attach_alternative(html_content,"text/html")
 	msg.send()
 
 def order(request):
@@ -46,7 +46,7 @@ def order(request):
 		del request.session['cart']
 		order.serial = serial_generator()
 		order.save()
-		##send_mail(order,request)
+		mailing(order,request)
 		for i in cart.items.all():
 			i.size.stock-=i.quantity
 			i.size.save()
