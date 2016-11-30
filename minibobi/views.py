@@ -59,7 +59,7 @@ def contact(request):
 		text_content += name+'('+email+')'+':  '
 		text_content += content
 		msg = EmailMultiAlternatives(subject, text_content, from_email, ['lushizhao@qq.com','info@minibobi.com',])
-		msg.send()
+		#msg.send()
 		status = 1
 		return render_to_response("contact.html",{ "status":status }, context_instance = RequestContext(request))
 	else:
